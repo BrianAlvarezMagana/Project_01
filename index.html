@@ -13,13 +13,14 @@
     <title>Dirty Food</title>
 </head>
 <body>
+
 <div class="container-full">
 
 <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light warning-color bg-dark bg-gradient">
 
   <!-- Navbar brand -->
-  <a class="navbar-brand p-3 text-white" href="#">Dirty Food</a>
+  <h1 class="navbar-brand p-3 text-white" href="#" style="text-align: center;">Dirty Food</h1>
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
@@ -27,67 +28,164 @@
         <a class="nav-link text-white" href="index.html">Home
         </a>
       </li>
+
       <li class="nav-item active">
         <a class="nav-link text-white" href="#">About Us
         </a>
       </li>
-
     </ul>
+
   </div>
 
 </nav>
 </div>
 <!--/.Navbar-->
+<main>
+  <section id="main-container">
+      <div class="p-5 text-center bg-light">
+        <h1 class="mb-3 text-black">What's in your Food?</h1>
+        <h4 class="mb-4 text-black">...and is it being recalled?!</h4>
+      </div>
 
-<div class="p-5 text-center bg-light">
-  <h1 class="mb-3 text-black">What's in your Food?</h1>
-  <h4 class="mb-4 text-black">...and is it being recalled?!</h4>
-</div>
+      <!--Section: Food Lookup-->
+      <div class="container-fluid"><div class="container">
+        <div class="row">
 
- <!--Section: Food Lookup-->
-<div class="container-fluid"><div class="container">
-  <div class="row">
+        <!-- Food Nutrition -->
+          <div class="col-md-6">
 
-  <!-- Food Nutrition -->
-    <div class="col-md-6">
+      <!-- Card -->
+      <div class="card">
+        <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Nutrition</h2>
+          <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
+          <a href="#!">
+          </a>
+        <div class="card-body">
+          <a class="d-flex mx-auto align-items-center justify-content-center btn btn-danger" id="search-nutritions">Search Nutrition Facts</a>
+        </div>
+      </div>
+      <!-- Card -->
 
-<!-- Card -->
-<div class="card">
-  <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Nutrition</h2>
-    <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
-    <a href="#!">
-    </a>
-  <div class="card-body">
-    <a href="nutritionfax.html" class="d-flex mx-auto align-items-center justify-content-center btn btn-danger">Search Nutrition Facts</a>
-  </div>
-</div>
-<!-- Card -->
+          </div>
 
-    </div>
+        <!-- Food Recalls -->
+          <div class="col-md-6">
+                                        
+      <!-- Card -->
+      <div class="card h-100">
+        <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Recalls</h2>
+          <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
+          <a href="#!">
+          </a>
 
-  <!-- Food Recalls -->
-    <div class="col-md-6">
-                                   
-<!-- Card -->
-<div class="card h-100">
-  <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Recalls</h2>
-    <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
-    <a href="#!">
-    </a>
+        <div class="card-body">
+          <a class="btn mx-auto btn-danger d-flex align-items-center justify-content-center" id="search-recalls">Search Food Recalls</a>
+        </div>
+      </div>
+      <!-- Card -->
 
-  <div class="card-body">
-    <a href="foodrecalls.html" class="btn mx-auto btn-danger d-flex align-items-center justify-content-center">Search Food Recalls</a>
-  </div>
-</div>
-<!-- Card -->
+          </div>
 
-    </div>
+        </div>
+      </div>
+      </div>
+  </section>
 
-  </div>
-</div>
-</div>
 
-      <footer class="fixed-bottom bg-dark bg-gradient text-center text-lg-start">
+    <section class="nutritional-container" style="display: none;">
+          <div class="p-5 text-center bg-light">
+            <h1 class="mb-3 text-black">What's in your Food?</h1>
+          </div>
+          
+          <!--Section: Food Lookup-->
+          <div class="container-fluid"><div class="container">
+            <div class="row">
+            <!-- Food Nutrition -->
+              <div class="col-md-6">
+          <!-- Card -->
+          <div class="card">
+            <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
+              <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
+          </div>
+          <!-- Card -->
+          
+              </div>
+          
+            <!-- Food Recalls -->
+              <div class="col-md-6">
+          <!-- Card -->
+          <div class="card h-100 align-items-center">
+            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Second Column</h2>
+          
+            <div class="d-flex w-75 ">
+              <div class="input-group">
+                  <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                    <label class="form-label" for="form1">Search</label>
+                  </div>
+                  <button type="button" class="btn btn-danger">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+            </div>
+          </div>
+          <!-- Card -->
+          
+              </div>
+          
+            </div>
+          </div>
+          </div>
+    </section>
+
+    <section class="recall-container" style="display: none;">
+          <div class="p-5 text-center bg-light">
+            <h1 class="mb-3 text-black">What Food is being recalled?</h1>
+          </div>
+
+          <!--Section: Food Lookup-->
+          <div class="container-fluid"><div class="container">
+            <div class="row">
+            <!-- Food Nutrition -->
+              <div class="col-md-6">
+          <!-- Card -->
+          <div class="card">
+            <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
+              <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
+          </div>
+          <!-- Card -->
+
+              </div>
+
+            <!-- Food Recalls -->
+              <div class="col-md-6">
+          <!-- Card -->
+          <div class="card h-100 align-items-center">
+            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Second Column</h2>
+
+            <div class="d-flex w-75 ">
+              <div class="input-group">
+                  <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                    <label class="form-label" for="form1">Search</label>
+                  </div>
+                  <button type="button" class="btn btn-danger" id="submit-button">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+            </div>
+          </div>
+          <!-- Card -->
+
+              </div>
+
+            </div>
+          </div>
+          </div>
+    </section>
+</main>
+
+      <footer class="bg-dark bg-gradient text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2);">
           © All Rights Reserved 
@@ -112,7 +210,7 @@
 <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 <script src="https://api.edamam.com/api/nutrition-details?app_id=fb60c395&app_key=16eba24a483d77ac9339bdf40c6e8370&beta=false&force=false"></script>
 <script src="./assets/app.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
