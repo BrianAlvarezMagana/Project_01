@@ -1,0 +1,19 @@
+https://developer.edamam.com/edamam-docs-nutrition-api       
+app_id	
+fb60c395
+App ID from your dashboard
+
+query	string
+app_key	
+16eba24a483d77ac9339bdf40c6e8370
+App key from your dashboard
+
+query	string
+
+https://open.fda.gov/apis/authentication/
+
+
+
+https://mdbootstrap.com/docs/
+
+https://github.com/BrianAlvarezMagana/Project_01/
