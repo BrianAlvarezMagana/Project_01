@@ -10,3 +10,12 @@
     object-fit: cover;
     margin-bottom: 25px;
 }
+
+.swal-overlay {
+    background: linear-gradient(gray, white);
+}
+
+.swal-modal {
+    width: 100%;
+    background-color: transparent;
+}

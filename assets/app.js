@@ -5,10 +5,9 @@ let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
 
 searchNu.addEventListener("click", () => {
+    let nutriImg = "./assets/images/nutri-page-loading.gif";
     swal ({
-        title: "Redirecting Page",
-        icon: "warning",
-        text: " ",
+        icon: nutriImg,
         button: false,
         timer: 2000
     }).then ((nutri) => {
@@ -18,10 +17,9 @@ searchNu.addEventListener("click", () => {
 })
 
 searchRe.addEventListener("click", () => {
+    let nutriImg = "./assets/images/recall-page-loading.gif";
     swal ({
-        title: "Redirecting Page",
-        icon: "warning",
-        text: " ",
+        icon: nutriImg,
         button: false,
         timer: 2000
     }).then ((nutri) => {
