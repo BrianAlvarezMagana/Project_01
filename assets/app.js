@@ -1,8 +1,20 @@
-let searchNu = document.getElementById("search-nutritions");
-let searchRe = document.getElementById("search-recalls");
+let searchHome = document.getElementById("link-search-home");
+let searchNu = document.getElementById("link-search-nutrition");
+let searchRe = document.getElementById("link-search-recall");
 let nutritionalCon = document.querySelector(".nutritional-container");
 let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
+
+searchHome.addEventListener("click", () => {
+    let nutriImg = "./assets/images/nutri-page-loading.gif";
+    swal ({
+        icon: nutriImg,
+        button: false,
+        timer: 2000
+    }).then ((nutri) => {
+        window.location.reload();
+    })
+})
 
 searchNu.addEventListener("click", () => {
     let nutriImg = "./assets/images/nutri-page-loading.gif";
@@ -12,6 +24,7 @@ searchNu.addEventListener("click", () => {
         timer: 2000
     }).then ((nutri) => {
         nutritionalCon.style.display = "block";
+        recallCon.style.display = "none";
         mainCont.style.display = "none";
     })
 })
@@ -24,10 +37,15 @@ searchRe.addEventListener("click", () => {
         timer: 2000
     }).then ((nutri) => {
         recallCon.style.display = "block";
+        nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
     })
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelector('.sidenav');
+    M.Sidenav.init(elems);
+  }); 
 
 
 

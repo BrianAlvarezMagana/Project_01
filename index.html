@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
-<!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"  rel="stylesheet"/>
-<link href="assets/style.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"  rel="stylesheet"/>
+    <link href="assets/style.css" rel="stylesheet"/>
     <title>Dirty Food</title>
 </head>
 <body>
 
-  <div class="container-full">
+  <header class="container-full">
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light warning-color bg-dark bg-gradient">
       <!-- Navbar brand -->
-      <h1 class="navbar-brand p-3 text-white" href="#" style="text-align: center;">Dirty Food</h1>
-  
-      <!-- Links -->
-      <ul class="navbar-nav ms-auto justify-content-end p-3">
-        <li class="nav-item active">
-          <a class="nav-link text-white" href="#">About Us</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" href="index.html">Home</a>
-        </li>
-      </ul>
+      <h1 id="title">Dirty Food
+      <section href="#" data-target="slide-out" class="menu-hash sidenav-trigger">
+        <div id="hash"></div>
+      </section>
+    </h1>
     </nav>
-  </div>
+  </header>
+
+  
+    <ul id="slide-out" class="sidenav" style="background: linear-gradient(rgb(80, 80, 80), white); width: 25%;">
+      <li id="menu">Menu</li>
+      <hr>
+      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-home">Home</a></li>
+      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-nutrition">Search Nutritional Facts</a></li>
+      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-recall">Search Food Recall</a></li>
+      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-about">About Us</a></li>
+      <hr>
+      <li id="menu1">Made by Awesome Geckos ©</li>
+    </ul>
 <!--/.Navbar-->
 <main>
   <section id="main-container">
@@ -52,9 +59,6 @@
           <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
           <a href="#!">
           </a>
-        <div class="card-body">
-          <a class="d-flex mx-auto align-items-center justify-content-center btn btn-danger" id="search-nutritions">Search Nutrition Facts</a>
-        </div>
       </div>
       <!-- Card -->
 
@@ -69,10 +73,6 @@
           <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
           <a href="#!">
           </a>
-
-        <div class="card-body">
-          <a class="btn mx-auto btn-danger d-flex align-items-center justify-content-center" id="search-recalls">Search Food Recalls</a>
-        </div>
       </div>
       <!-- Card -->
 
@@ -201,8 +201,9 @@
 </div>
 <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 <script src="https://api.edamam.com/api/nutrition-details?app_id=fb60c395&app_key=16eba24a483d77ac9339bdf40c6e8370&beta=false&force=false"></script>
-<script src="./assets/app.js"></script>
+<script type="text/javascript" src="./assets/app.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
