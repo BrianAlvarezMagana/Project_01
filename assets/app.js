@@ -26,6 +26,7 @@ searchNu.addEventListener("click", () => {
         nutritionalCon.style.display = "block";
         recallCon.style.display = "none";
         mainCont.style.display = "none";
+        document.getElementById("title").textContent = "Dirty Food : Nutritional Facts";
     })
 })
 
@@ -39,6 +40,7 @@ searchRe.addEventListener("click", () => {
         recallCon.style.display = "block";
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
+        document.getElementById("title").textContent = "Dirty Food : Food Recalls";
     })
 })
 
