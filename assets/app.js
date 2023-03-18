@@ -6,9 +6,10 @@ let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
 
 searchHome.addEventListener("click", () => {
-    let nutriImg = "./assets/images/nutri-page-loading.gif";
+    let homeImg = "./assets/images/home-page-loading.gif";
     swal ({
-        icon: nutriImg,
+        title: "Home Page",
+        icon: homeImg,
         button: false,
         timer: 2000
     }).then ((nutri) => {
@@ -19,6 +20,7 @@ searchHome.addEventListener("click", () => {
 searchNu.addEventListener("click", () => {
     let nutriImg = "./assets/images/nutri-page-loading.gif";
     swal ({
+        title: "Nutritional Facts Page",
         icon: nutriImg,
         button: false,
         timer: 2000
@@ -33,6 +35,7 @@ searchNu.addEventListener("click", () => {
 searchRe.addEventListener("click", () => {
     let nutriImg = "./assets/images/recall-page-loading.gif";
     swal ({
+        title: "Food Recall Page",
         icon: nutriImg,
         button: false,
         timer: 2000
