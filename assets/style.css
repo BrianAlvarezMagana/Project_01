@@ -41,6 +41,7 @@ a {
 
 .menu-hash {
     float:left;
+    padding-top: 8px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -105,9 +106,9 @@ a {
 }
 
 #title {
+    display: inline;
     height: 30px;
-    text-align: center;
     font-size: 25px;
     color: white;
-    display: inline;
 }
+
