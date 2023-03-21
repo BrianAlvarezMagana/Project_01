@@ -1,208 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"  rel="stylesheet"/>
-    <link href="assets/style.css" rel="stylesheet"/>
-    <title>Dirty Food</title>
-</head>
-<body>
-
-  <header class="container-full">
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light warning-color bg-dark bg-gradient">
-      <!-- Navbar brand -->
-      <section href="#" data-target="slide-out" class="menu-hash sidenav-trigger">
-        <div id="hash"></div>
-      </section>
-      <h1 id="title">Dirty Food : Home</h1>
-    </nav>
-  </header>
-
-  
-    <ul id="slide-out" class="sidenav" style="background: linear-gradient(rgb(80, 80, 80), white); width: 25%;">
-      <li id="menu">Menu</li>
-      <hr style="color: black;">
-      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-home">Home</a></li>
-      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-nutrition">Search Nutritional Facts</a></li>
-      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-recall">Search Food Recall</a></li>
-      <li><a class="waves-effect sidenav-close" href="#!" id="link-search-about">About Us</a></li>
-      <hr style="color: black;">
-      <li id="menu1">Made by Awesome Geckos ©</li>
-    </ul>
-<!--/.Navbar-->
-<main>
-  <section id="main-container">
-      <div class="p-5 text-center bg-light">
-        <h1 class="mb-3 text-black">What's in your Food?</h1>
-        <h4 class="mb-4 text-black">...and is it being recalled?!</h4>
-      </div>
-
-      <!--Section: Food Lookup-->
-      <div class="container-fluid"><div class="container">
-        <div class="row">
-
-        <!-- Food Nutrition -->
-          <div class="col-md-6">
-
-      <!-- Card -->
-      <div class="card">
-        <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Nutrition</h2>
-          <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
-          <a href="#!">
-          </a>
-      </div>
-      <!-- Card -->
-
-          </div>
-
-        <!-- Food Recalls -->
-          <div class="col-md-6">
-                                        
-      <!-- Card -->
-      <div class="card h-100">
-        <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Recalls</h2>
-          <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
-          <a href="#!">
-          </a>
-      </div>
-      <!-- Card -->
-
-          </div>
-
-        </div>
-      </div>
-      </div>
-  </section>
-
-
-    <section class="nutritional-container" style="display: none;">
-          <div class="p-5 text-center bg-light">
-            <h1 class="mb-3 text-black">What's in your Food?</h1>
-          </div>
-          
-          <!--Section: Food Lookup-->
-          <div class="container-fluid"><div class="container">
-            <div class="row">
-            <!-- Food Nutrition -->
-              <div class="col-md-6">
-          <!-- Card -->
-          <div class="card">
-            <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
-              <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top2" />
-          </div>
-          <!-- Card -->
-          
-              </div>
-          
-            <!-- Food Recalls -->
-              <div class="col-md-6">
-          <!-- Card -->
-          <div class="card h-100 align-items-center">
-            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Second Column</h2>
-          
-            <div class="d-flex w-75 ">
-              <div class="input-group">
-                  <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">Search</label>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+      <!-- MDB -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"  rel="stylesheet"/>
+      <link href="assets/style.css" rel="stylesheet"/>
+      <title>Dirty Food</title>
+   </head>
+   <body>
+      <header class="container-full">
+         <!--Navbar-->
+         <nav class="navbar navbar-expand-lg navbar-light warning-color bg-dark bg-gradient">
+            <!-- Navbar brand -->
+            <section href="#" data-target="slide-out" class="menu-hash sidenav-trigger">
+               <div id="hash"></div>
+            </section>
+            <h1 id="title">Dirty Food : Home</h1>
+         </nav>
+      </header>
+      <ul id="slide-out" class="sidenav" style="background: linear-gradient(rgb(80, 80, 80), white); width: 25%;">
+         <li id="menu">Menu</li>
+         <hr style="color: black;">
+         <li><a class="waves-effect sidenav-close" href="#!" id="link-search-home">Home</a></li>
+         <li><a class="waves-effect sidenav-close" href="#!" id="link-search-nutrition">Search Nutritional Facts</a></li>
+         <li><a class="waves-effect sidenav-close" href="#!" id="link-search-recall">Search Food Recall</a></li>
+         <li><a class="waves-effect sidenav-close" href="#!" id="link-search-about">About Us</a></li>
+         <hr style="color: black;">
+         <li id="menu1">Made by Awesome Geckos ©</li>
+      </ul>
+      <!--/.Navbar-->
+      <main>
+         <section id="main-container">
+            <div class="p-5 text-center bg-light">
+               <h1 class="mb-3 text-black">What's in your Food?</h1>
+               <h4 class="mb-4 text-black">...and is it being recalled?!</h4>
+            </div>
+            <!--Section: Food Lookup-->
+            <div class="container-fluid">
+               <div class="container">
+                  <div class="row">
+                     <!-- Food Nutrition -->
+                     <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Nutrition</h2>
+                           <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
+                           <a href="#!">
+                           </a>
+                        </div>
+                        <!-- Card -->
+                     </div>
+                     <!-- Food Recalls -->
+                     <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Recalls</h2>
+                           <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
+                           <a href="#!">
+                           </a>
+                        </div>
+                        <!-- Card -->
+                     </div>
                   </div>
-                  <button type="button" class="btn btn-danger">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
+               </div>
             </div>
-          </div>
-          <!-- Card -->
-          
-              </div>
-          
+         </section>
+         <section class="nutritional-container" style="display: none;">
+            <div class="p-5 text-center bg-light">
+               <h1 class="mb-3 text-black">What's in your Food?</h1>
             </div>
-          </div>
-          </div>
-    </section>
+            <!--Section: Food Lookup-->
+            <div class="container-fluid">
+               <div class="container">
+                  <div class="row">
+                     <!-- Food Nutrition -->
+                     <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
+                           <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top2" />
+                        </div>
+                        <!-- Card -->
+                     </div>
+                     <!-- Food Recalls -->
+                     <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card h-100 align-items-center ">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search Food</h2>
+                           <div class="d-flex w-75 ">
+                              <div class="input-group">
+                                 <div class="form-outline">
+                                    <input type="search" id="form1" class="form-control" />
+                                    <label class="form-label" for="form1">Type Here</label>
+                                  </div>
+                                </div>
+                             </div>
 
-    <section class="recall-container" style="display: none;">
-          <div class="p-5 text-center bg-light">
-            <h1 class="mb-3 text-black">What Food is being recalled?</h1>
-          </div>
+                           <!-- Button -->
+                          <div class="row col-12 justify-content-center align-items-center">
+                            <button type="button" class="btn justify-content-center align-items-center col-9 btn-success" id="submit-button">
+                             SEARCH</button>
+                          </div>
+                          <!-- /Button -->
+<!-- Display Info Card 
+!!! have to add style="display: none;" and JS to display when button is pressed !!!
+-->
+<div class=" p-3 card border border-success rounded col-12 align-items-center text-black h-55 ">
+  <h5 class="foodName1">FoodName1</h5>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
+  <h5 class="foodName2">FoodName2</h5>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
+  <h5 class="foodName3">FoodName3</h5>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
+  </div>
+<!-- /Display Info Card  -->
+                          </div>
+                        <!-- Card -->
 
-          <!--Section: Food Lookup-->
-          <div class="container-fluid"><div class="container">
-            <div class="row">
-            <!-- Food Nutrition -->
-              <div class="col-md-6">
-          <!-- Card -->
-          <div class="card">
-            <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
-              <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top2" />
-          </div>
-          <!-- Card -->
-
-              </div>
-
-            <!-- Food Recalls -->
-              <div class="col-md-6">
-          <!-- Card -->
-          <div class="card h-100 align-items-center">
-            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Second Column</h2>
-
-            <div class="d-flex w-75 ">
-              <div class="input-group">
-                  <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">Search</label>
+                     </div>
                   </div>
-                  <button type="button" class="btn btn-danger" id="submit-button">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
+               </div>
             </div>
-          </div>
-          <!-- Card -->
-
-              </div>
-
+         </section>
+         <section class="recall-container" style="display: none;">
+            <div class="p-5 text-center bg-light">
+               <h1 class="mb-3 text-black">What Food is being recalled?</h1>
             </div>
-          </div>
-          </div>
-    </section>
-</main>
+            <!--Section: Food Lookup-->
+            <div class="container-fluid">
+               <div class="container">
+                  <div class="row">
+                     <!-- Food Nutrition -->
+                     <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
+                           <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top2" />
+                        </div>
+                        <!-- Card -->
+                     </div>
+                     <!-- Food Recalls -->
+                     <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card h-100 align-items-center">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search by State</h2>
+                           <div class="d-flex w-75 ">
+                              <div class="input-group">
+                                 <div class="form-outline">
+                                    <input type="search" id="form1" class="form-control" />
+                                    <label class="form-label" for="form1">Type Here</label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <!-- Button -->
+                           <div class="row col-12 justify-content-center align-items-center">
+                            <button type="button" class="btn justify-content-center align-items-center col-9 btn-danger" id="submit-button">
+                            SEARCH</button>
+                           </div>
+                           <!-- /Button -->
+<!-- Display Info Card 
+!!! have to add style="display: none;" and JS to display when button is pressed !!!
+-->
+                          <div class=" p-3 card border border-danger rounded col-12 align-items-center text-black h-55 ">
+                          <h5 class="foodName1">FoodName1</h5>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
+                          <h5 class="foodName2">FoodName2</h5>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
+                          <h5 class="foodName3">FoodName3</h5>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
+                          </div>
+<!-- /Display Info Card  -->
+                        </div>
+                        <!-- Card -->
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
 
       <footer class="bg-dark bg-gradient text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2);">
-          © All Rights Reserved 
-          <p>Created by Benjamin Ngyuen, Brian Alvarez, Ryan Reid, and Junnel Padilla.</p>
-        </div>
-        <!-- Copyright -->
+         <!-- Copyright -->
+         <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2);">
+            © All Rights Reserved 
+            <p>Created by Benjamin Ngyuen, Brian Alvarez, Ryan Reid, and Junnel Padilla.</p>
+         </div>
+         <!-- Copyright -->
       </footer>
-
-    </div>
-
-  </form>
-
-</div>
-
-</div>
-
-</section>
-<!--Section: Content-->
+      </div>
+      </form>
+      </div>
+      </div>
+      </section>
+      <!--Section: Content-->
 
 
-</div>
-<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
-<script src="https://api.edamam.com/api/nutrition-details?app_id=fb60c395&app_key=16eba24a483d77ac9339bdf40c6e8370&beta=false&force=false"></script>
-<script type="text/javascript" src="./assets/app.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
+      </div>
+      <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+      <script src="https://api.edamam.com/api/nutrition-details?app_id=fb60c395&app_key=16eba24a483d77ac9339bdf40c6e8370&beta=false&force=false"></script>
+      <script type="text/javascript" src="./assets/app.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   </body>
 </html>

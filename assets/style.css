@@ -112,3 +112,6 @@ a {
     color: white;
 }
 
+.searchBtn {
+    object-fit: cover;
+}
