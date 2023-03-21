@@ -2,6 +2,7 @@ let searchHome = document.getElementById("link-search-home");
 let searchNu = document.getElementById("link-search-nutrition");
 let searchRe = document.getElementById("link-search-recall");
 let searchFacts = document.getElementById("link-search-facts");
+let searchAbout = document.getElementById("link-search-about");
 let nutritionalCon = document.querySelector(".nutritional-container");
 let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
@@ -52,7 +53,7 @@ searchRe.addEventListener("click", () => {
 searchFacts.addEventListener("click", () => {
     let nutriImg = "./assets/images/facts-loading-image.gif";
     swal ({
-        title: "Facts & FAQs",
+        title: "Facts & FAQs Page",
         icon: nutriImg,
         button: false,
         timer: 2000
@@ -62,6 +63,22 @@ searchFacts.addEventListener("click", () => {
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
         document.getElementById("title").textContent = "Dirty Food : Facts & FAQs";
+    })
+})
+
+searchAbout.addEventListener("click", () => {
+    let nutriImg = "./assets/images/about-us-loading.gif";
+    swal ({
+        title: "About Us Page",
+        icon: nutriImg,
+        button: false,
+        timer: 2000
+    }).then ((nutri) => {
+        factsCont.style.display = "block";
+        recallCon.style.display = "none";
+        nutritionalCon.style.display = "none";
+        mainCont.style.display = "none";
+        document.getElementById("title").textContent = "Dirty Food : About Us";
     })
 })
 
