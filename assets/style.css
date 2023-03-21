@@ -85,7 +85,8 @@ a {
 #link-search-home,
 #link-search-nutrition,
 #link-search-recall,
-#link-search-about {
+#link-search-about,
+#link-search-facts {
     color: black;
     font-size: 20px;
 }
@@ -114,4 +115,12 @@ a {
 
 .searchBtn {
     object-fit: cover;
+}
+
+#facts-info {
+    font-size: 20px;
+    border: solid;
+    margin-top: 20px;
+    background: linear-gradient(rgb(190, 189, 189), white);
+    color: black;
 }
