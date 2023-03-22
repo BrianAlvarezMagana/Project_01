@@ -165,6 +165,9 @@ function testBtnF() {
     // var searchBtnEl = document.createElement("button");
 
     card.setAttribute("id", "cardEl" + i);
+    /// added by brian
+    card.classList.add("p-3", "card", "border", "border-danger", "rounded", "w-100", "align-items-center");
+    ///
     proDesc.setAttribute("id", "proDescEl" + i);
     reasonR.setAttribute("id", "reasonREl" + i);
     st.setAttribute("id", "stEl" + i);
@@ -184,19 +187,24 @@ function testBtnF() {
     card.appendChild(termDate);
     // document.getElementById("searchContainer").appendChild(searchBtnEl);
 
-    card.style.display = "flex";
-    card.style.flexDirection = "column";
-    card.style.alignItems = "column";
-    card.style.flexWrap = "wrap";
-    card.style.width = "500px";
-    card.style.height = "400px";
-    card.style.margin = "70px";
-    card.style.border = "2px solid dodgerblue";
-    card.style.backgroundColor = "springgreen";
+    //////////////// all card styles i ended up commenting out 
 
-    proDesc.style.backgroundColor = "pink";
+   //card.style.display = "flex";
+   //card.style.flexDirection = "column";
+   //card.style.alignItems = "column";
+   //card.style.flexWrap = "wrap";
+   //card.style.width = "500px";
+   //card.style.height = "400px";
+   //card.style.margin = "70px";
+   //card.style.border = "2px solid dodgerblue";
+   //card.style.backgroundColor = "springgreen";
+  
 
-    reasonR.style.backgroundColor = "magenta";
+   // proDesc.style.backgroundColor = "pink";
+
+   // reasonR.style.backgroundColor = "magenta";
+/////////////// end of commented out ////
+
 
     console.log(searchResultArray);
 
