@@ -100,6 +100,10 @@
                                  <div class="form-outline">
                                     <input type="search" id="form1" class="form-control" />
                                     <label class="form-label" for="form1">Type Here</label>
+
+                                    <textarea id="searchField117" placeholder="searchField117"></textarea>
+
+
                                   </div>
                                 </div>
                              </div>
@@ -156,7 +160,7 @@
                            <div class="d-flex w-75 ">
                               <div class="input-group">
                                  <div class="form-outline">
-                                    <input type="search" id="form1" class="form-control" />
+                                    <input type="search" id="form1ben10" class="form-control" />
                                     <label class="form-label" for="form1">Type Here</label>
                                  </div>
                               </div>
@@ -164,21 +168,23 @@
 
                            <!-- Button -->
                            <div class="row col-12 justify-content-center align-items-center">
-                            <button type="button" class="btn justify-content-center align-items-center col-9 btn-danger" id="submit-button">
+                            <button type="button" class="btn justify-content-center align-items-center col-9 btn-danger" id="submit-buttonben10" onClick="searchBtnF()">
                             SEARCH</button>
                            </div>
                            <!-- /Button -->
 <!-- Display Info Card 
 !!! have to add style="display: none;" and JS to display when button is pressed !!!
--->
-                          <div class=" p-3 card border border-danger rounded col-12 align-items-center text-black h-55 ">
+-->                       
+                          <div id="cardContainer"></div>
+
+                          <!-- <div class=" p-3 card border border-danger rounded col-12 align-items-center text-black h-55 ">
                           <h5 class="foodName1">FoodName1</h5>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
                           <h5 class="foodName2">FoodName2</h5>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
                           <h5 class="foodName3">FoodName3</h5>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
-                          </div>
+                          </div> -->
 <!-- /Display Info Card  -->
                         </div>
                         <!-- Card -->
@@ -251,7 +257,7 @@
 
       </div>
       <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
-      <script src="https://api.edamam.com/api/nutrition-details?app_id=fb60c395&app_key=16eba24a483d77ac9339bdf40c6e8370&beta=false&force=false"></script>
+      <!-- <script src="https://api.edamam.com/api/nutrition-details?app_id=fb60c395&app_key=16eba24a483d77ac9339bdf40c6e8370&beta=false&force=false"></script> -->
       <script type="text/javascript" src="./assets/app.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
