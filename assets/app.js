@@ -96,3 +96,119 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     M.Carousel.init(elems);
   });
+
+
+//////////////////////////////////////////////////////////////
+// 3/21/23 adding searchBtnF() to the project
+//////////////////////////////////////////////////////////////
+
+
+
+
+function testBtnF() {
+    console.log("test btn");
+}
+
+      var resultCounterV = 0;
+
+    function searchBtnF() {
+    console.log("search button clicked");
+
+    // //adding button with all necessary attributes
+    // // console.log("add submit button");
+    // // submitBtn = document.getElementById("submit-button");
+    // // submitBtn.setAttribute("onClick", "searchBtnF()");
+    
+      
+    var searchResultArray = [];
+    var searchInputValue = document.getElementById("form1ben10").value;
+    console.log(searchResultArray);
+
+    if (resultCounterV > 0) {
+      console.log("result count if statement procced");
+      for (let s=0; s<resultCounterV; s++) {
+        console.log("resultCounterV :" + resultCounterV);
+        document.getElementById("cardContainer").removeChild(document.getElementById("cardEl" + s));
+        console.log("remove child :" + ("cardEl" + s));
+      }
+      resultCounterV = 0;
+    }
+
+
+    fetch("https://api.fda.gov/food/enforcement.json?limit=1000").then((res) => res.json()).then(function (data) {
+
+      for(x=0;x<data.results.length; x++) {
+        if (data.results[x].status == "Terminated") {
+          if (data.results[x].state == searchInputValue) {
+          searchResultArray.push(data.results[x]);
+          console.log(data.results[x]);
+          resultCounterV++;
+          }
+        }
+      }
+
+
+
+      for(i=0;i<searchResultArray.length; i++) {
+
+
+    // var body = document.getElementById("bodyEl");
+    var cardCon = document.getElementById("cardContainer");
+    var card = document.createElement("div");
+    var proDesc = document.createElement("div");
+    var reasonR = document.createElement("div");
+    var st = document.createElement("div");
+    var cit = document.createElement("div");
+    var disP = document.createElement("div");
+    var stats = document.createElement("div");
+    var termDate = document.createElement("div");
+    // var searchBtnEl = document.createElement("button");
+
+    card.setAttribute("id", "cardEl" + i);
+    proDesc.setAttribute("id", "proDescEl" + i);
+    reasonR.setAttribute("id", "reasonREl" + i);
+    st.setAttribute("id", "stEl" + i);
+    cit.setAttribute("id", "citEl" + i);
+    disP.setAttribute("id", "disP" + i);
+    stats.setAttribute("id", "stats" + i);
+    termDate.setAttribute("id", "termDateEl" + i);
+    // searchBtnEl.setAttribute("id", "searchButton");
+
+    cardCon.appendChild(card);
+    card.appendChild(proDesc);
+    card.appendChild(reasonR);
+    card.appendChild(st);
+    card.appendChild(cit);
+    card.appendChild(disP);
+    card.appendChild(stats);
+    card.appendChild(termDate);
+    // document.getElementById("searchContainer").appendChild(searchBtnEl);
+
+    card.style.display = "flex";
+    card.style.flexDirection = "column";
+    card.style.alignItems = "column";
+    card.style.flexWrap = "wrap";
+    card.style.width = "500px";
+    card.style.height = "400px";
+    card.style.margin = "70px";
+    card.style.border = "2px solid dodgerblue";
+    card.style.backgroundColor = "springgreen";
+
+    proDesc.style.backgroundColor = "pink";
+
+    reasonR.style.backgroundColor = "magenta";
+
+    console.log(searchResultArray);
+
+    proDesc.textContent = searchResultArray[i].product_description;
+    reasonR.textContent = searchResultArray[i].reason_for_recall;
+    st.textContent = searchResultArray[i].state;
+    cit.textContent = searchResultArray[i].city;
+    disP.textContent = searchResultArray[i].distribution_pattern;
+    stats.textContent = searchResultArray[i].status;
+    termDate.textContent = searchResultArray[i].termination_date;
+    console.log("result counter variable :" + resultCounterV);
+      }
+    })
+  
+  }
