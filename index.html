@@ -101,8 +101,6 @@
                                     <input type="search" id="form1" class="form-control" />
                                     <label class="form-label" for="form1">Type Here</label>
 
-                                    <textarea id="searchField117" placeholder="searchField117"></textarea>
-
 
                                   </div>
                                 </div>
@@ -110,21 +108,29 @@
 
                            <!-- Button -->
                           <div class="row col-12 justify-content-center align-items-center">
-                            <button type="button" class="btn justify-content-center align-items-center col-9 btn-success" id="submit-button">
+                            <button type="button" class="btn justify-content-center align-items-center col-9 btn-success" id="submit-button" onClick="nutritionFactSearchBtnF()">
                              SEARCH</button>
                           </div>
                           <!-- /Button -->
 <!-- Display Info Card 
 !!! have to add style="display: none;" and JS to display when button is pressed !!!
 -->
-<div class=" p-3 card border border-success rounded col-12 align-items-center text-black h-55 ">
+
+<div id="cardContainerNutrition">
+   <div id="cardContainerNutritionError">
+   Something went wrong! Try your search again!
+</div>
+</div>
+
+
+<!-- <div class=" p-3 card border border-success rounded col-12 align-items-center text-black h-55 ">
   <h5 class="foodName1">FoodName1</h5>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
   <h5 class="foodName2">FoodName2</h5>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
   <h5 class="foodName3">FoodName3</h5>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
-  </div>
+  </div> -->
 <!-- /Display Info Card  -->
                           </div>
                         <!-- Card -->
