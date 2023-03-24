@@ -15,6 +15,7 @@ searchHome.addEventListener("click", () => {
         title: "Home Page",
         icon: homeImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
         window.location.reload();
@@ -27,6 +28,7 @@ searchNu.addEventListener("click", () => {
         title: "Nutritional Facts Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
         aboutCont.style.display = "none"
@@ -44,10 +46,12 @@ searchRe.addEventListener("click", () => {
         title: "Food Recall Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
         aboutCont.style.display = "none"
         recallCon.style.display = "block";
+        factsCont.style.display = "none"
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
         document.getElementById("title").textContent = "Dirty Food : Food Recalls";
@@ -55,11 +59,12 @@ searchRe.addEventListener("click", () => {
 })
 
 searchFacts.addEventListener("click", () => {
-    let nutriImg = "./assets/images/facts-loading-image.gif";
+    let nutriImg = "./assets/images/facts-loading-image1.gif";
     swal ({
         title: "Facts & FAQs Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
         aboutCont.style.display = "none"
@@ -77,6 +82,7 @@ searchAbout.addEventListener("click", () => {
         title: "About Us Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
         aboutCont.style.display = "block"
@@ -103,10 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Carousel.init(elems);
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible1');
-    M.Collapsible.init(elems);
-  });
 
 
 //////////////////////////////////////////////////////////////
