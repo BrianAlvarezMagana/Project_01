@@ -30,6 +30,7 @@ searchNu.addEventListener("click", () => {
         timer: 2000
     }).then ((nutri) => {
         aboutCont.style.display = "none"
+        factsCont.style.display = "none"
         nutritionalCon.style.display = "block";
         recallCon.style.display = "none";
         mainCont.style.display = "none";
