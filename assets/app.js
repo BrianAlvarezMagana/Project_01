@@ -103,6 +103,11 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Carousel.init(elems);
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible1');
+    M.Collapsible.init(elems);
+  });
+
 
 //////////////////////////////////////////////////////////////
 // 3/21/23 adding searchBtnF() to the project

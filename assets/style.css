@@ -127,11 +127,11 @@ a {
 }
 
 #facts-info1 {
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 20px;
     color: black;
-    background: -o-linear-gradient(rgb(255, 255, 242), rgb(241, 241, 241));
-    font-family: cursive;
+    background: linear-gradient( rgb(238, 238, 218), rgb(255, 255, 255), rgb(255, 255, 255), rgb(238, 238, 218));
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 hr.separator-bg {
@@ -153,4 +153,22 @@ hr.separator-bg1 {
     background-size: cover;
     color: black;
     background-repeat: no-repeat;
+}
+
+#socials-included {
+    width: 50%;
+    cursor: pointer;
+}
+#socials-included:hover {
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(223, 220, 220);
+}
+
+#hover-effects1 {
+    color: black;
+}
+
+#hover-effects1:hover {
+    color: blue;
 }
