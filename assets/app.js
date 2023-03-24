@@ -7,6 +7,7 @@ let nutritionalCon = document.querySelector(".nutritional-container");
 let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
 let factsCont = document.querySelector(".faqs-container");
+let aboutCont = document.querySelector(".about-us-container")
 
 searchHome.addEventListener("click", () => {
     let homeImg = "./assets/images/home-page-loading.gif";
@@ -28,6 +29,7 @@ searchNu.addEventListener("click", () => {
         button: false,
         timer: 2000
     }).then ((nutri) => {
+        aboutCont.style.display = "none"
         nutritionalCon.style.display = "block";
         recallCon.style.display = "none";
         mainCont.style.display = "none";
@@ -43,6 +45,7 @@ searchRe.addEventListener("click", () => {
         button: false,
         timer: 2000
     }).then ((nutri) => {
+        aboutCont.style.display = "none"
         recallCon.style.display = "block";
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
@@ -58,6 +61,7 @@ searchFacts.addEventListener("click", () => {
         button: false,
         timer: 2000
     }).then ((nutri) => {
+        aboutCont.style.display = "none"
         factsCont.style.display = "block";
         recallCon.style.display = "none";
         nutritionalCon.style.display = "none";
@@ -74,7 +78,8 @@ searchAbout.addEventListener("click", () => {
         button: false,
         timer: 2000
     }).then ((nutri) => {
-        factsCont.style.display = "block";
+        aboutCont.style.display = "block"
+        factsCont.style.display = "none";
         recallCon.style.display = "none";
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
