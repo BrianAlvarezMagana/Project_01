@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var resultCounterV = 0;
       var retryV = 0;
 
-    async function searchBtnF() {
+    function searchBtnF() {
     console.log("search button clicked");
 
     // //adding button with all necessary attributes
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    await fetch("https://api.fda.gov/food/enforcement.json?limit=1000").then((res) => res.json()).then(function (data) {
+    fetch("https://api.fda.gov/food/enforcement.json?limit=1000").then((res) => res.json()).then(function (data) {
 
       for(x=0;x<data.results.length; x++) {
         if (data.results[x].status == "Terminated") {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var resultCounterV2 = 0;
 
-async function nutritionFactSearchBtnF() {
+function nutritionFactSearchBtnF() {
 
 var searchInputValue2 = document.getElementById("form1").value;
 
@@ -241,7 +241,7 @@ document.getElementById("cardContainerNutritionError").style.display = "none";
     }
 
 
-  await fetch("https://api.api-ninjas.com/v1/nutrition?query=" + searchInputValue2, 
+  fetch("https://api.api-ninjas.com/v1/nutrition?query=" + searchInputValue2, 
   {headers:{"X-Api-Key":"EylXzrZXiY+QZVYcYKkVGg==N5f12J1v0qB2Gly9"}}) 
   .then((res) => res.json())
   .then(function (data) {
