@@ -172,3 +172,35 @@ hr.separator-bg1 {
 #hover-effects1:hover {
     color: blue;
 }
+
+.hover-effect {
+    text-align: center;
+    background: linear-gradient(rgb(97, 214, 132), white);
+    font-size: 30px;
+    font-family: monospace;
+    color: black;
+}
+
+.hover-effect:hover {
+    background: linear-gradient(rgb(92, 179, 118), rgb(224, 224, 224));
+    font-size: 35px;
+}
+
+#city-list1 {
+    text-align: center;
+    background: linear-gradient(rgb(119, 190, 140), white);
+    font-family: monospace;
+    font-size: 20px;
+}
+
+#clear-history {
+    text-align: center;
+    background: linear-gradient(rgb(241, 98, 98), white);
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#clear-history:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(168, 73, 73), rgb(199, 196, 196));
+}

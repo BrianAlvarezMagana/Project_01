@@ -7,7 +7,12 @@ let nutritionalCon = document.querySelector(".nutritional-container");
 let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
 let factsCont = document.querySelector(".faqs-container");
-let aboutCont = document.querySelector(".about-us-container")
+let aboutCont = document.querySelector(".about-us-container");
+let submitBtn = document.getElementById("submit-buttonben10");
+let searchBar = document.getElementById("form1ben10");
+let clearHistory = document.getElementById("clear-history");
+let cityList = document.getElementById("city-list");
+let savedCities = JSON.parse(localStorage.getItem("data")) || [];
 
 searchHome.addEventListener("click", () => {
     let homeImg = "./assets/images/home-page-loading.gif";
@@ -109,6 +114,47 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Carousel.init(elems);
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems);
+  });
+
+  submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    let userInput = searchBar.value;
+    if(userInput === "") {
+        swal ({
+            title: 'Cannot Be Blank! Please Try Again!',
+            icon: 'warning',
+            button: false,
+            text: ' ',
+            timer: 2000
+        })
+        return;
+    } else {
+        var li = document.createElement("a");
+        if(savedCities.indexOf(userInput) == -1){
+            savedCities.push(userInput);
+            li.textContent = userInput;
+            li.className = "hover-effect";
+            cityList.appendChild(li);
+            localStorage.setItem("data", JSON.stringify(savedCities));
+    }
+    }
+})
+
+  for(let i=0; i < savedCities.length; i++){
+      let itemStored = document.createElement("a");
+      itemStored.textContent = savedCities[i];
+      itemStored.className = "hover-effect";
+      cityList.appendChild(itemStored);
+      itemStored.addEventListener("click", () => {
+      })
+  }
+  clearHistory.addEventListener("click", ()=> {
+      localStorage.removeItem("data");
+      cityList.innerHTML = " ";
+  })
 
 
 //////////////////////////////////////////////////////////////

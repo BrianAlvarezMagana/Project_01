@@ -37,6 +37,13 @@
          <li id="menu1">Made by Awesome Geckos ©</li>
       </ul>
       <!--/.Navbar-->
+
+      <ul id='dropdown1' class='dropdown-content'>
+         <li id="city-list1">State Searched:</li>
+         <li id="city-list" class="justify-content-center align-items-center col-9"></li>
+         <li id="clear-history">Clear History</li>
+       </ul>
+       
       <main>
          <section id="main-container">
             <div class="p-5 text-center bg-light">
@@ -138,6 +145,7 @@
          <section class="recall-container" style="display: none;">
             <div class="p-5 text-center bg-light">
                <h1 class="mb-3 text-black">What Food is being recalled?</h1>
+               <button type="button" class="btn dropdown-trigger btn justify-content-center align-items-center col-9 btn-danger" href='#' data-target='dropdown1'>Search History</button>
             </div>
             <!--Section: Food Lookup-->
             <div class="container-fluid">
