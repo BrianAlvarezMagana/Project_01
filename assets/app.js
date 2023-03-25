@@ -7,13 +7,21 @@ let nutritionalCon = document.querySelector(".nutritional-container");
 let recallCon = document.querySelector(".recall-container");
 let mainCont = document.getElementById("main-container");
 let factsCont = document.querySelector(".faqs-container");
+let aboutCont = document.querySelector(".about-us-container");
+let submitBtn = document.getElementById("submit-buttonben10");
+let searchBar = document.getElementById("form1ben10");
+let clearHistory = document.getElementById("clear-history");
+let cityList = document.getElementById("city-list");
+let savedCities = JSON.parse(localStorage.getItem("data")) || [];
 
+// Loading Pages for each click on each page
 searchHome.addEventListener("click", () => {
     let homeImg = "./assets/images/home-page-loading.gif";
     swal ({
         title: "Home Page",
         icon: homeImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
         window.location.reload();
@@ -26,8 +34,11 @@ searchNu.addEventListener("click", () => {
         title: "Nutritional Facts Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
+        aboutCont.style.display = "none"
+        factsCont.style.display = "none"
         nutritionalCon.style.display = "block";
         recallCon.style.display = "none";
         mainCont.style.display = "none";
@@ -41,9 +52,12 @@ searchRe.addEventListener("click", () => {
         title: "Food Recall Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
+        aboutCont.style.display = "none"
         recallCon.style.display = "block";
+        factsCont.style.display = "none"
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
         document.getElementById("title").textContent = "Dirty Food : Food Recalls";
@@ -51,13 +65,15 @@ searchRe.addEventListener("click", () => {
 })
 
 searchFacts.addEventListener("click", () => {
-    let nutriImg = "./assets/images/facts-loading-image.gif";
+    let nutriImg = "./assets/images/facts-loading-image1.gif";
     swal ({
         title: "Facts & FAQs Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
+        aboutCont.style.display = "none"
         factsCont.style.display = "block";
         recallCon.style.display = "none";
         nutritionalCon.style.display = "none";
@@ -72,9 +88,11 @@ searchAbout.addEventListener("click", () => {
         title: "About Us Page",
         icon: nutriImg,
         button: false,
+        closeOnClickOutside: false,
         timer: 2000
     }).then ((nutri) => {
-        factsCont.style.display = "block";
+        aboutCont.style.display = "block"
+        factsCont.style.display = "none";
         recallCon.style.display = "none";
         nutritionalCon.style.display = "none";
         mainCont.style.display = "none";
@@ -82,6 +100,7 @@ searchAbout.addEventListener("click", () => {
     })
 })
 
+// Materialize Tools for Sidebar, dropdowns, collapsible, carousel
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelector('.sidenav');
     M.Sidenav.init(elems);
@@ -97,7 +116,62 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Carousel.init(elems);
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems);
+  });
 
+// local storage function that happens after a search button is click
+// stores user input value to local storage and content persist after click
+  submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    let userInput = searchBar.value;
+    if(userInput === "") {
+        swal ({
+            title: 'Cannot Be Blank! Please Try Again!',
+            icon: 'warning',
+            button: false,
+            text: ' ',
+            timer: 2000
+        })
+        document.getElementById("suggestions").innerHTML = "Suggestions:"
+        return;
+    } else {
+        searchBar.value = " ";
+        document.getElementById("suggestions").innerHTML = "Top Results:";
+        var li = document.createElement("a");
+        if(savedCities.indexOf(userInput) == -1){
+            savedCities.push(userInput);
+            li.textContent = userInput;
+            li.className = "hover-effect";
+            cityList.appendChild(li);
+            localStorage.setItem("data", JSON.stringify(savedCities));
+
+            li.addEventListener("click", () => {
+              let result = li.textContent;
+              searchBar.value = result;
+            })
+    }
+    }
+})
+
+  for(let i=0; i < savedCities.length; i++){
+      let itemStored = document.createElement("a");
+      itemStored.textContent = savedCities[i];
+      itemStored.className = "hover-effect";
+      cityList.appendChild(itemStored);
+      itemStored.addEventListener("click", () => {
+        let result1 = itemStored.textContent;
+        searchBar.value = result1;
+      })
+  }
+  clearHistory.addEventListener("click", ()=> {
+      localStorage.removeItem("data");
+      cityList.innerHTML = " ";
+  })
+
+
+  
 //////////////////////////////////////////////////////////////
 // 3/21/23 adding searchBtnF() to the project
 //////////////////////////////////////////////////////////////

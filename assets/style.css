@@ -1,8 +1,10 @@
+/* Universal Selector */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* Element Selector */
 a {
     display: block;
     padding-left: 1em;
@@ -30,6 +32,7 @@ a {
     margin-bottom: 25px;
 }
 
+/* loading pages using modals */
 .swal-overlay {
     background: linear-gradient(gray, white);
 }
@@ -39,6 +42,7 @@ a {
     background-color: transparent;
 }
 
+/* Hamburger hashes that activates  side bar */
 .menu-hash {
     float:left;
     padding-top: 8px;
@@ -62,6 +66,7 @@ a {
    transition: 0.3s;
 }
 
+/* animation to make hahes makes an arrowhead pointing right when hover */
 .menu-hash:hover:before {
     transform: translateY(-3px) rotate(-130deg);
     background-image: linear-gradient(to right, rgb(120, 119, 119), white);
@@ -89,6 +94,7 @@ a {
 #link-search-facts {
     color: black;
     font-size: 20px;
+    font-family: monospace
 }
 
 #menu {
@@ -121,6 +127,87 @@ a {
     font-size: 20px;
     border: solid;
     margin-top: 20px;
-    background: linear-gradient(rgb(190, 189, 189), white);
+    background: linear-gradient(rgb(255, 237, 237), white);
     color: black;
+}
+
+#facts-info1 {
+    font-size: 25px;
+    margin-top: 20px;
+    color: black;
+    background: linear-gradient( rgb(238, 238, 218), rgb(255, 255, 255), rgb(255, 255, 255), rgb(238, 238, 218));
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Separator image for about us page information */
+hr.separator-bg {
+    border: 0;
+    height: 3em;
+    background-image: url(./Images/separator-image.png);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+hr.separator-bg1 {
+    border: 0;
+    height: 3em;
+    background-image: url(./Images/menu-bar-separator.png);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    background-repeat: no-repeat;
+}
+
+#socials-included {
+    width: 50%;
+    cursor: pointer;
+}
+#socials-included:hover {
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(223, 220, 220);
+}
+
+#hover-effects1 {
+    color: black;
+}
+
+#hover-effects1:hover {
+    color: blue;
+}
+
+.hover-effect {
+    text-align: center;
+    background: linear-gradient(rgb(97, 214, 132), white);
+    font-size: 30px;
+    font-family: monospace;
+    color: black;
+}
+
+.hover-effect:hover {
+    background: linear-gradient(rgb(92, 179, 118), rgb(224, 224, 224));
+    font-size: 35px;
+}
+
+#city-list1 {
+    text-align: center;
+    background: linear-gradient(rgb(119, 190, 140), white);
+    font-family: monospace;
+    font-size: 20px;
+}
+
+#clear-history {
+    text-align: center;
+    background: linear-gradient(rgb(241, 98, 98), white);
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#clear-history:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(168, 73, 73), rgb(199, 196, 196));
+    font-size: 25px;
 }
