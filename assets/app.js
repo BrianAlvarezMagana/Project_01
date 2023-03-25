@@ -14,6 +14,7 @@ let clearHistory = document.getElementById("clear-history");
 let cityList = document.getElementById("city-list");
 let savedCities = JSON.parse(localStorage.getItem("data")) || [];
 
+// Loading Pages for each click on each page
 searchHome.addEventListener("click", () => {
     let homeImg = "./assets/images/home-page-loading.gif";
     swal ({
@@ -99,6 +100,7 @@ searchAbout.addEventListener("click", () => {
     })
 })
 
+// Materialize Tools for Sidebar, dropdowns, collapsible, carousel
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelector('.sidenav');
     M.Sidenav.init(elems);
@@ -119,6 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Dropdown.init(elems);
   });
 
+// local storage function that happens after a search button is click
+// stores user input value to local storage and content persist after click
   submitBtn.addEventListener("click", function(event) {
     event.preventDefault();
     let userInput = searchBar.value;
@@ -167,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
 
+  
 //////////////////////////////////////////////////////////////
 // 3/21/23 adding searchBtnF() to the project
 //////////////////////////////////////////////////////////////

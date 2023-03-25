@@ -1,8 +1,10 @@
+/* Universal Selector */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* Element Selector */
 a {
     display: block;
     padding-left: 1em;
@@ -30,6 +32,7 @@ a {
     margin-bottom: 25px;
 }
 
+/* loading pages using modals */
 .swal-overlay {
     background: linear-gradient(gray, white);
 }
@@ -39,6 +42,7 @@ a {
     background-color: transparent;
 }
 
+/* Hamburger hashes that activates  side bar */
 .menu-hash {
     float:left;
     padding-top: 8px;
@@ -62,6 +66,7 @@ a {
    transition: 0.3s;
 }
 
+/* animation to make hahes makes an arrowhead pointing right when hover */
 .menu-hash:hover:before {
     transform: translateY(-3px) rotate(-130deg);
     background-image: linear-gradient(to right, rgb(120, 119, 119), white);
@@ -134,6 +139,7 @@ a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Separator image for about us page information */
 hr.separator-bg {
     border: 0;
     height: 3em;
