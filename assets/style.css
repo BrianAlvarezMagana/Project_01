@@ -203,4 +203,5 @@ hr.separator-bg1 {
 #clear-history:hover {
     cursor: pointer;
     background: linear-gradient(rgb(168, 73, 73), rgb(199, 196, 196));
+    font-size: 25px;
 }

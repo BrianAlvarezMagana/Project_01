@@ -130,8 +130,11 @@ document.addEventListener('DOMContentLoaded', function() {
             text: ' ',
             timer: 2000
         })
+        document.getElementById("suggestions").innerHTML = "Suggestions:"
         return;
     } else {
+        searchBar.value = " ";
+        document.getElementById("suggestions").innerHTML = "Top Results:";
         var li = document.createElement("a");
         if(savedCities.indexOf(userInput) == -1){
             savedCities.push(userInput);
@@ -139,6 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
             li.className = "hover-effect";
             cityList.appendChild(li);
             localStorage.setItem("data", JSON.stringify(savedCities));
+
+            li.addEventListener("click", () => {
+              let result = li.textContent;
+              searchBar.value = result;
+            })
     }
     }
 })
@@ -149,6 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
       itemStored.className = "hover-effect";
       cityList.appendChild(itemStored);
       itemStored.addEventListener("click", () => {
+        let result1 = itemStored.textContent;
+        searchBar.value = result1;
       })
   }
   clearHistory.addEventListener("click", ()=> {

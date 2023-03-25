@@ -169,7 +169,7 @@
                               <div class="input-group">
                                  <div class="form-outline">
                                     <input type="search" id="form1ben10" class="form-control" />
-                                    <label class="form-label" for="form1">Type Here</label>
+                                    <label class="form-label" for="form1"></label>
                                  </div>
                               </div>
                            </div>
@@ -178,13 +178,14 @@
                            <div class="row col-12 justify-content-center align-items-center">
                             <button type="button" class="btn justify-content-center align-items-center col-9 btn-danger" id="submit-buttonben10" onClick="searchBtnF()">
                             SEARCH</button>
+                            <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="suggestions" style="margin-top: 25px;"></h2>
                            </div>
                            <!-- /Button -->
 <!-- Display Info Card 
 !!! have to add style="display: none;" and JS to display when button is pressed !!!
--->                       
-                          <div id="cardContainer"></div>
-
+-->                        <a id="scale-demo" href="#!" class="scale-transition">
+                              <div id="cardContainer"></div>
+                           </a>
                           <!-- <div class=" p-3 card border border-danger rounded col-12 align-items-center text-black h-55 ">
                           <h5 class="foodName1">FoodName1</h5>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
