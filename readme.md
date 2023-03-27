@@ -19,19 +19,19 @@ included about us page to give user a little information about us and it also in
 ## Screenshots
 
 Landing Page
-<img src="./assets/images/landing-page.png" />
+<img src="./assets/Images/landing-page.png" />
 
 Nutritional Facts Page
-<img src="./assets/images/nutritional-facts-page.png"/>
+<img src="./assets/Images/nutritional-facts-page.png"/>
 
 Food Recall Page
-<img src="./assets/images/food-recall-page.png" />
+<img src="./assets/Images/food-recall-page.png" />
 
 Facts & FAQs Page
-<img src="./assets/images/facts-page.png" />
+<img src="./assets/Images/facts-page.png" />
 
 About Us Page
-<img src="./assets/images/about-us-page.png"/>
+<img src="./assets/Images/about-us-page.png" />
 
 ## Credits
 
