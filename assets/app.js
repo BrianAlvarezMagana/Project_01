@@ -12,7 +12,71 @@ let submitBtn = document.getElementById("submit-buttonben10");
 let searchBar = document.getElementById("form1ben10");
 let clearHistory = document.getElementById("clear-history");
 let cityList = document.getElementById("city-list");
+let searchNutri = document.getElementById("search-nf");
+let searchFood = document.getElementById("search-fr");
+let searchUs = document.getElementById("about-us-page");
+let searchFaqs = document.getElementById("facts-and-faqs");
 let savedCities = JSON.parse(localStorage.getItem("data")) || [];
+
+// Nutritional Facts Landing Page
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Food Recall Landing Page
+let slideIndex1 = 1;
+showSlides1(slideIndex1);
+
+// Next/previous controls
+function plusSlides1(n) {
+  showSlides1(slideIndex1 += n);
+}
+
+// Thumbnail image controls
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
+}
+
+function showSlides1(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides1");
+  let dots = document.getElementsByClassName("dot1");
+  if (n > slides.length) {slideIndex1 = 1}
+  if (n < 1) {slideIndex1 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex1-1].style.display = "block";
+  dots[slideIndex1-1].className += " active";
+}
 
 // Loading Pages for each click on each page
 searchHome.addEventListener("click", () => {
@@ -26,6 +90,24 @@ searchHome.addEventListener("click", () => {
     }).then ((nutri) => {
         window.location.reload();
     })
+})
+
+searchNutri.addEventListener("click", () => {
+  let nutriImg = "./assets/images/nutri-page-loading.gif";
+  swal ({
+      title: "Nutritional Facts Page",
+      icon: nutriImg,
+      button: false,
+      closeOnClickOutside: false,
+      timer: 2000
+  }).then ((nutri) => {
+      aboutCont.style.display = "none"
+      factsCont.style.display = "none"
+      nutritionalCon.style.display = "block";
+      recallCon.style.display = "none";
+      mainCont.style.display = "none";
+      document.getElementById("title").textContent = "Dirty Food : Nutritional Facts";
+  })
 })
 
 searchNu.addEventListener("click", () => {
@@ -46,6 +128,24 @@ searchNu.addEventListener("click", () => {
     })
 })
 
+searchFood.addEventListener("click", () => {
+  let nutriImg = "./assets/images/recall-page-loading.gif";
+  swal ({
+      title: "Food Recall Page",
+      icon: nutriImg,
+      button: false,
+      closeOnClickOutside: false,
+      timer: 2000
+  }).then ((nutri) => {
+      aboutCont.style.display = "none"
+      recallCon.style.display = "block";
+      factsCont.style.display = "none"
+      nutritionalCon.style.display = "none";
+      mainCont.style.display = "none";
+      document.getElementById("title").textContent = "Dirty Food : Food Recalls";
+  })
+})
+
 searchRe.addEventListener("click", () => {
     let nutriImg = "./assets/images/recall-page-loading.gif";
     swal ({
@@ -64,6 +164,24 @@ searchRe.addEventListener("click", () => {
     })
 })
 
+searchFaqs.addEventListener("click", () => {
+  let nutriImg = "./assets/images/facts-loading-image1.gif";
+  swal ({
+      title: "Facts & FAQs Page",
+      icon: nutriImg,
+      button: false,
+      closeOnClickOutside: false,
+      timer: 2000
+  }).then ((nutri) => {
+      aboutCont.style.display = "none"
+      factsCont.style.display = "block";
+      recallCon.style.display = "none";
+      nutritionalCon.style.display = "none";
+      mainCont.style.display = "none";
+      document.getElementById("title").textContent = "Dirty Food : Facts & FAQs";
+  })
+})
+
 searchFacts.addEventListener("click", () => {
     let nutriImg = "./assets/images/facts-loading-image1.gif";
     swal ({
@@ -80,6 +198,25 @@ searchFacts.addEventListener("click", () => {
         mainCont.style.display = "none";
         document.getElementById("title").textContent = "Dirty Food : Facts & FAQs";
     })
+})
+
+searchUs.addEventListener("click", () => {
+  let nutriImg = "./assets/images/about-us-loading.gif";
+  swal ({
+      title: "About Us Page",
+      icon: nutriImg,
+      button: false,
+      closeOnClickOutside: false,
+      timer: 2000
+  }).then ((nutri) => {
+      aboutCont.style.display = "block"
+      factsCont.style.display = "none";
+      recallCon.style.display = "none";
+      nutritionalCon.style.display = "none";
+      mainCont.style.display = "none";
+      document.querySelector(".tap-target").close();
+      document.getElementById("title").textContent = "Dirty Food : About Us";
+  })
 })
 
 searchAbout.addEventListener("click", () => {
@@ -120,6 +257,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     M.Dropdown.init(elems);
   });
+
+  let instances = null;
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tap-target');
+    instances = M.TapTarget.init(elems, {});
+  });
+
+  function openCorner() {
+    instances[0].open();
+  }
+  
 
 // local storage function that happens after a search button is click
 // stores user input value to local storage and content persist after click
@@ -793,3 +941,4 @@ function nutritionTwoF() {
   searchBtnF();
   nutritionFactSearchBtnF();
 }
+
