@@ -24,6 +24,7 @@
             </section>
             <h1 id="title">Dirty Food : Home</h1>
          </nav>
+         <a id="menu" class="waves-effect waves-light btn btn-floating justify-content-center align-items-center col-9 fixed-location1"></a>
       </header>
       <ul id="slide-out" class="sidenav" style="background: linear-gradient(rgb(138, 137, 137), white); width: 25%;">
          <li id="menu" style="margin-top: 10px;">Menu</li>
@@ -43,12 +44,34 @@
          <li id="city-list" class="justify-content-center align-items-center col-9"></li>
          <li id="clear-history">Clear History</li>
        </ul>
+
+       <div class="fixed-location">
+         <a id="menu" class="waves-effect waves-light btn btn-floating" style="margin-bottom: 25px; margin-right: 25px;" onclick="openCorner()"><i class="large material-icons red darken-1 z-depth-5" style="font-size: 30px;">help</i></a>
+       </div>
+
+       <div class="tap-target" data-target="menu">
+         <div class="tap-target-content">
+           <h5>Welcome!</h5>
+           <p>Thank you for using our website!</p>
+           <p>If you have any questions, feel free to reach us on our socials located in "About Us" page.</p>
+           
+           <a type="button" class="btn justify-content-center align-items-center col-6 btn-success" style="margin-left: 85px;" id="about-us-page">About Us</a>
+           <p style="margin-left: 125px; margin-top: 20px;">Click on "Facts & FAQs" to know more about food recalls and frequently ask questions.</p>
+           <a type="button" class="btn justify-content-center align-items-center col-6 btn-success" style="margin-left: 200px;" id="facts-and-faqs">Facts & FAQs</a>
+         </div>
+       </div>
        
       <main>
          <section id="main-container">
             <div class="p-5 text-center bg-light">
-               <h1 class="mb-3 text-black">What's in your Food?</h1>
-               <h4 class="mb-4 text-black">...and is it being recalled?!</h4>
+               <h1 class="mb-3 text-black" style="font-size: 100px;">What's in your Food?</h1>
+               <h4 class="mb-4 text-black" style="font-size: 50px;">...and is it being recalled?!</h4>
+               <br>
+               <button type="button" class="btn justify-content-center align-items-center col-6 btn-success" style="margin-bottom: 20px; height: 75px; font-size: 20px; border-radius: 20px;" id="search-nf">Search Nutritional Facts 🔎</button>
+               <h4 class="mb-4" style="font-size: 10px; color: rgb(167, 164, 164); font-style: italic;">Checkout what's in your food now!</h4>
+               <button type="button" class="btn justify-content-center align-items-center col-6 btn-danger" style="margin-bottom: 20px; height: 75px; font-size: 20px; border-radius: 20px;" id="search-fr">Search Food Recalls 🔎</button>
+               <h4 class="mb-4" style="font-size: 10px; color: rgb(167, 164, 164); font-style: italic;">Checkout what's being recalled!</h4>
+               <hr>
             </div>
             <!--Section: Food Lookup-->
             <div class="container-fluid">
@@ -57,9 +80,171 @@
                      <!-- Food Nutrition -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card">
-                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Nutrition</h2>
-                           <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top" />
+                        <div class="card" style="height: 1300px;">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black" style="font-family: monospace; font-size: 40px;">Food Nutrition</h2>
+                          <!-- Slideshow container -->
+                           <div class="slideshow-container">
+
+                              <!-- Full-width images with number and caption text -->
+                              <div class="mySlides fade">
+                              <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Chocolate Chip Cookies</h2><br>
+                              <img src="./assets/Images/chocolate-chip-cookies.webp" style="width:100%; height: 600px;">
+                              <hr class="separator-bg">
+                              <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                 serving size: 100 g<br>
+                                 calories: 502.6<br>
+                                 fat total: 33.6 g<br>
+                                 cholesterol: 100 mg<br>
+                                 sodium: 359 mg<br>
+                                 carbohydrates: 45.6 g<br>
+                                 fiber: 2.1 g<br>
+                                 sugar: 41.7 g<br>
+                                 protein: 4.7 g<br>
+                                 potassium: 70 mg<br>
+                              </h2>
+                              </div>
+                           
+                              <div class="mySlides fade">
+                                 <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Spam</h2><br>
+                                 <img src="./assets/Images/spam-image.webp" style="width:100%; height: 600px;">
+                                 <hr class="separator-bg">
+                                 <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                    serving size: 100 g<br>
+                                    calories: 316.3<br>
+                                    fat total: 26.3 g<br>
+                                    cholesterol: 72 mg<br>
+                                    sodium: 1397 mg<br>
+                                    carbohydrates: 4.6 g<br>
+                                    fiber: 0 g<br>
+                                    sugar: 0 g<br>
+                                    protein: 13.3 g<br>
+                                    potassium: 149 mg<br>
+                                 </h2>
+                                 </div>
+                           
+                                 <div class="mySlides fade">
+                                    <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Fried Chicken</h2><br>
+                                    <img src="./assets/Images/fried-chicken.jpg" style="width:100%; height: 600px;">
+                                    <hr class="separator-bg">
+                                    <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                       serving size: 100 g<br>
+                                       calories: 261.5<br>
+                                       fat total: 14.6 g<br>
+                                       cholesterol: 90 mg<br>
+                                       sodium: 85 mg<br>
+                                       carbohydrates: 3.1 g<br>
+                                       fiber: 0.1 g<br>
+                                       sugar: 0 g<br>
+                                       protein: 28.7 g<br>
+                                       potassium: 187 mg<br>
+                                    </h2>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Spaghetti</h2><br>
+                                       <img src="./assets/Images/red-spaghetti.jpg" style="width:100%; height: 600px;">
+                                       <hr class="separator-bg">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                          serving size: 100 g<br>
+                                          calories: 154.1<br>
+                                          fat total: 0.6 g<br>
+                                          cholesterol: 0 mg<br>
+                                          sodium: 4 mg<br>
+                                          carbohydrates: 30.6 g<br>
+                                          fiber: 1.3 g<br>
+                                          sugar: 1.1 g<br>
+                                          protein: 5.3 g<br>
+                                          potassium: 75 mg<br>
+                                       </h2>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Ramen</h2><br>
+                                       <img src="./assets/Images/ramen-bowl.jpg" style="width:100%; height: 600px;">
+                                       <hr class="separator-bg">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                          serving size: 100 g<br>
+                                          calories: 87.9<br>
+                                          fat total: 2.4 g<br>
+                                          cholesterol: 34 mg<br>
+                                          sodium: 203 mg<br>
+                                          carbohydrates: 9.9 g<br>
+                                          fiber: 0.6 g<br>
+                                          sugar: 0.8 g<br>
+                                          protein: 6.5 g<br>
+                                          potassium: 71 mg<br>
+                                       </h2>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Tacos</h2><br>
+                                       <img src="./assets/Images/beef-tacos.jpg" style="width:100%; height: 600px;">
+                                       <hr class="separator-bg">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                          serving size: 100 g<br>
+                                          calories: 205.5<br>
+                                          fat total: 9.7 g<br>
+                                          cholesterol: 25 mg<br>
+                                          sodium: 566 mg<br>
+                                          carbohydrates: 19.9 g<br>
+                                          fiber: 2.9 g<br>
+                                          sugar: 1.6 g<br>
+                                          protein: 9.2 g<br>
+                                          potassium: 165 mg<br>
+                                       </h2>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Donut</h2><br>
+                                       <img src="./assets/Images/powder-donuts.jpg" style="width:100%; height: 600px;">
+                                       <hr class="separator-bg">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                          serving size: 100 g<br>
+                                          calories: 420.2<br>
+                                          fat total: 23 g<br>
+                                          cholesterol: 30 mg<br>
+                                          sodium: 312 mg<br>
+                                          carbohydrates: 48.8 g<br>
+                                          fiber: 2.1 g<br>
+                                          sugar: 22.5 g<br>
+                                          protein: 6.1 g<br>
+                                          potassium: 116 mg<br>
+                                       </h2>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation">Cheeseburger</h2><br>
+                                       <img src="./assets/Images/cheese-burgers.jpg" style="width:100%; height: 600px;">
+                                       <hr class="separator-bg">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                          serving size: 100 g<br>
+                                          calories: 275.8<br>
+                                          fat total: 14.3 g<br>
+                                          cholesterol: 48 mg<br>
+                                          sodium: 591 mg<br>
+                                          carbohydrates: 19.5 g<br>
+                                          fiber: 1.2 g<br>
+                                          sugar: 3.6 g<br>
+                                          protein: 15.3 g<br>
+                                          potassium: 180 mg<br>
+                                       </h2>
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                           </div>
+                           <br>
+                                    <div style="text-align:center" display="none">
+                                       <span class="dot" onclick="currentSlide(1)"></span>
+                                       <span class="dot" onclick="currentSlide(2)"></span>
+                                       <span class="dot" onclick="currentSlide(3)"></span>
+                                       <span class="dot" onclick="currentSlide(4)"></span>
+                                       <span class="dot" onclick="currentSlide(5)"></span>
+                                       <span class="dot" onclick="currentSlide(6)"></span>
+                                       <span class="dot" onclick="currentSlide(7)"></span>
+                                       <span class="dot" onclick="currentSlide(8)"></span>
+                                    </div>
                            <a href="#!">
                            </a>
                         </div>
@@ -68,9 +253,173 @@
                      <!-- Food Recalls -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card">
-                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">Food Recalls</h2>
-                           <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top" />
+                        <div class="card" style="height: 1300px;">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black" style="font-family: monospace; font-size: 40px;">Food Recalls</h2>
+                            <!-- Slideshow container -->
+                            <div class="slideshow-container1">
+
+                              <!-- Full-width images with number and caption text -->
+                              <div class="mySlides1 fade1">
+                              <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Select Jif® Peanut Butter products</h2><br>
+                              <img src="./assets/Images/jif-pb&j.jpg" style="width:100%; height: 600px;">
+                              <hr class="separator-bg">
+                              <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                 Brand: Jif®<br>
+                                 Product Type: Food & Beverages<br>
+                                 Company Name: The J. M. Smucker Co.<br>
+                                 Status: Terminated<br>
+                                 Termination Date: 05/20/2022<br>
+                                 Reason: Potential Salmonella Contamination<br>
+                                 Lot Number: 1274425 – 2140425<br>
+                                 Conducted By: Food and Drug Administration (FDA)
+                              </h2>
+                              <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/j-m-smucker-co-issues-voluntary-recall-select-jifr-products-sold-us-potential-salmonella" target="_blank">
+                                 More Information</a>
+                              </div>
+                           
+                              <div class="mySlides1 fade1">
+                                 <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Restaurant Style Italian Dressing</h2><br>
+                                 <img src="./assets/Images/italian-dressing.jpg" style="width:100%; height: 600px;">
+                                 <hr class="separator-bg">
+                                 <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                    Brand: Tuscan Garden<br>
+                                    Product Type: Food & Beverages<br>
+                                    Company Name: TreeHouse Foods, Inc.<br>
+                                    Status: Terminated<br>
+                                    Termination Date: 09/24/2022<br>
+                                    Reason: Undeclared Allergen/Wheat and Soy<br>
+                                    UPC Number: 14099100074871<br>
+                                    Conducted By: Food and Drug Administration (FDA)
+                                 </h2>
+                                 <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/treehouse-foods-announces-voluntary-recall-certain-tuscan-garden-restaurant-style-italian-dressing" target="_blank">
+                                    More Information</a>
+                                 </div>
+                           
+                                 <div class="mySlides1 fade1">
+                                    <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Candy Corn</h2><br>
+                                    <img src="./assets/Images/candy-corn.jpg" style="width:100%; height: 600px;">
+                                    <hr class="separator-bg">
+                                    <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                       Brand: Arcade Snacks<br>
+                                       Product Type: Food & Beverages<br>
+                                       Company Name: Arcade Snacks<br>
+                                       Status: Terminated<br>
+                                       Termination Date: 09/23/2022<br>
+                                       Reason: Undeclared Egg<br>
+                                       UPC Number: 018586 001144<br>
+                                       Conducted By: Food and Drug Administration (FDA)
+                                    </h2>
+                                    <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/arcade-snacks-issues-allergy-alert-undeclared-egg-candy-corn" target="_blank">
+                                       More Information</a>
+                                    </div>
+
+                                    <div class="mySlides1 fade1">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Ice Cream</h2><br>
+                                       <img src="./assets/Images/ice-cream.jpg" style="width:100%; height: 600px;">
+                                       <hr class="separator-bg">
+                                       <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                          Brand: Big Olaf<br>
+                                          Product Type: Food & Beverages<br>
+                                          Company Name: Big Olaf Creamery, LLC<br>
+                                          Status: Terminated<br>
+                                          Termination Date: 07/13/2022<br>
+                                          Reason: Listeria monocytogenes<br>
+                                          UPC Number: All Included<br>
+                                          Conducted By: Food and Drug Administration (FDA)
+                                       </h2>
+                                       <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/big-olaf-creamery-recalls-ice-cream-because-possible-health-risk" target="_blank">
+                                          More Information</a>
+                                       </div>
+
+                                    
+                                       <div class="mySlides1 fade1">
+                                          <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Lemony Arugula Basil Salad Kit</h2><br>
+                                          <img src="./assets/Images/salad-kit.jpg" style="width:100%; height: 600px;">
+                                          <hr class="separator-bg">
+                                          <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                             Brand: Trader Joe’s<br>
+                                             Product Type: Food & Beverages<br>
+                                             Company Name: Taylor Farms Retail<br>
+                                             Status: Terminated<br>
+                                             Termination Date: 05/28/2022<br>
+                                             Reason: Undeclared wheat and eggs<br>
+                                             UPC Number: 00662932<br>
+                                             Conducted By: Food and Drug Administration (FDA)
+                                          </h2>
+                                          <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/california-firm-issues-voluntary-product-recall-due-undeclared-wheat-and-egg-trader-joes-lemony" target="_blank">
+                                             More Information</a>
+                                          </div>
+
+                                          <div class="mySlides1 fade1">
+                                             <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Enoki Mushrooms</h2><br>
+                                             <img src="./assets/Images/enoki-mushroom.jpg" style="width:100%; height: 600px;">
+                                             <hr class="separator-bg">
+                                             <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                                Brand: Yes!<br>
+                                                Product Type: Food & Beverages, Produce<br>
+                                                Company Name: T Fresh Company<br>
+                                                Status: Terminated<br>
+                                                Termination Date: 04/21/2022<br>
+                                                Reason: Listeria monocytogenes contamination<br>
+                                                UPC Number: 825382736947<br>
+                                                Conducted By: Food and Drug Administration (FDA)
+                                             </h2>
+                                             <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/t-fresh-company-city-industry-ca-recalling-its-75oz-200g-yes-enoki-mushrooms-due-possible-health" target="_blank">
+                                                More Information</a>
+                                             </div>
+   
+
+                                             <div class="mySlides1 fade1">
+                                                <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Unbleached Flour</h2><br>
+                                                <img src="./assets/Images/wheat-flour.jpg" style="width:100%; height: 600px;">
+                                                <hr class="separator-bg">
+                                                <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                                   Brand: Hodgson Mill<br>
+                                                   Product Type: Food & Beverages<br>
+                                                   Company Name: Hodgson Mill, Inc.<br>
+                                                   Status: Terminated<br>
+                                                   Termination Date: 11/27/2019<br>
+                                                   Reason: Potential E. Coli Contamination<br>
+                                                   UPC Number: 071518050092<br>
+                                                   Conducted By: Food and Drug Administration (FDA)
+                                                </h2>
+                                                <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/hodgson-mill-issues-voluntary-recall-unbleached-all-purpose-white-wheat-flour-due-potential-presence" target="_blank">
+                                                   More Information</a>
+                                                </div>
+
+                                                <div class="mySlides1 fade1">
+                                                   <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="box-animation1">Vanilla Yogurt Covered Cranberries</h2><br>
+                                                   <img src="./assets/Images/cranberries-vanilla.jpg" style="width:100%; height: 600px;">
+                                                   <hr class="separator-bg">
+                                                   <h2 class="d-flex align-items-center justify-content-center card-title text-black">
+                                                      Brand: Sprouts<br>
+                                                      Product Type: Food & Beverages, Allergens<br>
+                                                      Company Name: Hickory Harvest Foods<br>
+                                                      Status: Terminated<br>
+                                                      Termination Date: 02/09/2021<br>
+                                                      Reason: Undeclared Almonds<br>
+                                                      UPC Number: 646670463778<br>
+                                                      Conducted By: Food and Drug Administration (FDA)
+                                                   </h2>
+                                                   <br><a type="button" class="btn justify-content-center align-items-center col-12 btn-danger" href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/hickory-harvest-foods-issues-allergy-alert-undeclared-almonds-sprouts-vanilla-flavored-yogurt" target="_blank">
+                                                      More Information</a>
+                                                   </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev1" onclick="plusSlides1(-1)">&#10094;</a>
+                                    <a class="next1" onclick="plusSlides1(1)">&#10095;</a>
+                           </div>
+                           <br>
+                                    <div style="text-align:center" display="none">
+                                       <span class="dot1" onclick="currentSlide(1)"></span>
+                                       <span class="dot1" onclick="currentSlide(2)"></span>
+                                       <span class="dot1" onclick="currentSlide(3)"></span>
+                                       <span class="dot1" onclick="currentSlide(4)"></span>
+                                       <span class="dot1" onclick="currentSlide(5)"></span>
+                                       <span class="dot1" onclick="currentSlide(6)"></span>
+                                       <span class="dot1" onclick="currentSlide(7)"></span>
+                                       <span class="dot1" onclick="currentSlide(8)"></span>
+                                    </div>
                            <a href="#!">
                            </a>
                         </div>
@@ -79,7 +428,10 @@
                   </div>
                </div>
             </div>
+            <h4 class="mb-4 text-center" style="font-size: 15px; color: rgb(59, 59, 59); font-style: italic;">Not what your looking for? Click the search buttons located on top of the page or sidebar!</h4>
          </section>
+         
+
          <section class="nutritional-container" style="display: none;">
             <div class="p-5 text-center bg-light">
                <h1 class="mb-3 text-black">What's in your Food?</h1>
@@ -96,7 +448,7 @@
                      <!-- Food Nutrition -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card">
+                        <div class="card h-100">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
                            <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top2" />
                         </div>
@@ -105,7 +457,7 @@
                      <!-- Food Recalls -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card h-100 align-items-center ">
+                        <div class="card h-100 align-items-center">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search Food</h2>
                            <div class="d-flex w-75 ">
                               <div class="input-group">
@@ -166,7 +518,7 @@
                      <!-- Food Nutrition -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card">
+                        <div class="card h-100">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
                            <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top2" />
                         </div>
@@ -218,8 +570,7 @@
 
          <section class="faqs-container" style="display: none;">
             <div class="p-5 text-center bg-light">
-               <h1 class="mb-3 text-black">Facts Information 💡</h1><br>
-               <img src="./assets/Images/food-picture.jpg"/>
+               <img src="./assets/Images/clipartfoodsafety.png"/>
                <br><p id="facts-info" class="center-align">Food recalls are a common occurrence in the food industry, and they are typically initiated when there is a risk to public health. According to the US Food and Drug Administration (FDA), the most common reasons for food recalls include undeclared allergens, contamination with pathogens like Salmonella or E. coli, and mislabeling. While some food recalls are voluntary, others are mandated by government agencies. In the US, the FDA has the authority to order a recall of any food product that it deems to be a threat to public health.
                   Nutrition is a critical aspect of human health, and the food we eat plays a crucial role in determining our nutritional status. A well-balanced diet should provide us with all the necessary nutrients our body needs, including carbohydrates, proteins, fats, vitamins, and minerals. However, some food products may contain high levels of unhealthy ingredients like saturated fats, added sugars, and sodium, which can increase the risk of chronic diseases like heart disease, diabetes, and obesity. Food labels can be a helpful tool in determining the nutritional content of the food we eat.
                   Food recalls and food nutrition are closely linked because food recalls can be caused by issues with the nutritional content of a product. For example, a recall may be initiated if a product is found to contain excessive amounts of a nutrient, like vitamin D, which can lead to toxicity. Similarly, a recall may be issued if a product contains an ingredient that is not listed on the label, like peanuts, which can be dangerous for people with peanut allergies. By understanding the nutritional content of the food we eat, we can make informed decisions about what we put into our bodies and reduce the risk of consuming products that may be subject to a recall.
@@ -228,32 +579,31 @@
                <ul class="collapsible">
                   <li>
                     <h3 class="collapsible-header"><i class="pulse material-icons">add</i>What is a food recall?</h3>
-                    <div class="collapsible-body"><span style="font-size: 20px;">A food recall is when a food product is removed from the market because it is deemed to be a threat to public health. This can happen for a variety of reasons, including contamination with harmful pathogens, undeclared allergens, or mislabeling. Food recalls can be initiated by government agencies like the FDA, or they can be voluntary recalls initiated by the food manufacturer.</span></div>
+                    <div class="collapsible-body bg-light"><span style="font-size: 20px;">A food recall is when a food product is removed from the market because it is deemed to be a threat to public health. This can happen for a variety of reasons, including contamination with harmful pathogens, undeclared allergens, or mislabeling. Food recalls can be initiated by government agencies like the FDA, or they can be voluntary recalls initiated by the food manufacturer.</span></div>
                   </li>
                   <li>
                      <h3 class="collapsible-header"><i class="material-icons">add</i>Why is nutrition important?</h3>
-                  
-                     <div class="collapsible-body"><span style="font-size: 20px;">Nutrition is important because it plays a critical role in our overall health and well-being. The food we eat provides our bodies with the nutrients it needs to function properly, including carbohydrates, proteins, fats, vitamins, and minerals. A well-balanced diet can help prevent chronic diseases like heart disease, diabetes, and cancer, while an unhealthy diet can increase the risk of these diseases.</span></div>
+                     <div class="collapsible-body bg-light"><span style="font-size: 20px;">Nutrition is important because it plays a critical role in our overall health and well-being. The food we eat provides our bodies with the nutrients it needs to function properly, including carbohydrates, proteins, fats, vitamins, and minerals. A well-balanced diet can help prevent chronic diseases like heart disease, diabetes, and cancer, while an unhealthy diet can increase the risk of these diseases.</span></div>
                   </li>
                   <li>
                      <h3 class="collapsible-header"><i class="material-icons">add</i>How can I determine the nutritional content of a food product?</h3>
-                    <div class="collapsible-body"><span style="font-size: 20px;">Food labels are a helpful tool in determining the nutritional content of a food product. In the US, food labels are required to list the serving size, number of servings per container, total calories, and amounts of various nutrients, including fat, cholesterol, sodium, carbohydrates, fiber, sugar, and protein. By reading food labels, you can make informed decisions about the nutritional content of the food you eat.</span></div>
+                    <div class="collapsible-body bg-light"><span style="font-size: 20px;">Food labels are a helpful tool in determining the nutritional content of a food product. In the US, food labels are required to list the serving size, number of servings per container, total calories, and amounts of various nutrients, including fat, cholesterol, sodium, carbohydrates, fiber, sugar, and protein. By reading food labels, you can make informed decisions about the nutritional content of the food you eat.</span></div>
                   </li>
                   <li>
                      <h3 class="collapsible-header"><i class="material-icons">add</i>What should I do if I have a recalled food product?</h3>
-                     <div class="collapsible-body"><span style="font-size: 20px;">If you have a recalled food product, you should stop using or consuming it immediately. If you have already consumed the product and are experiencing symptoms like nausea, vomiting, diarrhea, or fever, you should seek medical attention. You can also contact the manufacturer or retailer of the product for information on how to return or dispose of it.</span></div>
+                     <div class="collapsible-body bg-light"><span style="font-size: 20px;">If you have a recalled food product, you should stop using or consuming it immediately. If you have already consumed the product and are experiencing symptoms like nausea, vomiting, diarrhea, or fever, you should seek medical attention. You can also contact the manufacturer or retailer of the product for information on how to return or dispose of it.</span></div>
                    </li>
                    <li>
                      <h3 class="collapsible-header"><i class="material-icons">add</i>What should I do if I have purchased a recalled food product?</h3>
-                     <div class="collapsible-body"><span style="font-size: 20px;">If you have purchased a recalled food product, you should stop consuming it immediately and follow the instructions provided by the company or the government agency that issued the recall. In some cases, you may be able to return the product to the place of purchase for a refund.</span></div>
+                     <div class="collapsible-body bg-light"><span style="font-size: 20px;">If you have purchased a recalled food product, you should stop consuming it immediately and follow the instructions provided by the company or the government agency that issued the recall. In some cases, you may be able to return the product to the place of purchase for a refund.</span></div>
                    </li>
                    <li>
                      <h3 class="collapsible-header"><i class="material-icons">add</i>What is the recommended daily intake of calories?</h3>
-                     <div class="collapsible-body"><span style="font-size: 20px;">The recommended daily intake of calories varies depending on factors such as age, gender, weight, height, and activity level. However, the general guideline for an average adult is around 2,000 to 2,500 calories per day.</span></div>
+                     <div class="collapsible-body bg-light"><span style="font-size: 20px;">The recommended daily intake of calories varies depending on factors such as age, gender, weight, height, and activity level. However, the general guideline for an average adult is around 2,000 to 2,500 calories per day.</span></div>
                    </li>
                    <li>
                      <h3 class="collapsible-header"><i class="material-icons">add</i>What are some good sources of protein?</h3>
-                     <div class="collapsible-body"><span style="font-size: 20px;">Good sources of protein include meat, poultry, fish, beans, legumes, nuts, seeds, and dairy products.</span></div>
+                     <div class="collapsible-body bg-light"><span style="font-size: 20px;">Good sources of protein include meat, poultry, fish, beans, legumes, nuts, seeds, and dairy products.</span></div>
                    </li>
                 </ul>
             </div>
