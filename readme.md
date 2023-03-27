@@ -1,8 +1,5 @@
 # Dirty Foods
 
-## URL
-https://brianalvarezmagana.github.io/Project_01/
-
 ## Usage
 
 Are you curious about how much calories, protein or fat your eating? Are you also curious if the food your buying is has been recalled? Well this app is perfect for you!
@@ -19,22 +16,24 @@ included about us page to give user a little information about us and it also in
 
 ## URL
 
+https://brianalvarezmagana.github.io/Project_01/
+
 ## Screenshots
 
 Landing Page
-<img src="./assets/Images/landing-page.png" />
+<img src="./assets/Images/landing-page.png"/>
 
 Nutritional Facts Page
 <img src="./assets/Images/nutritional-facts-page.png"/>
 
 Food Recall Page
-<img src="./assets/Images/food-recall-page.png" />
+<img src="./assets/Images/food-recall-page.png"/>
 
 Facts & FAQs Page
-<img src="./assets/Images/facts-page.png" />
+<img src="./assets/Images/facts-page.png"/>
 
 About Us Page
-<img src="./assets/Images/about-us-page.png" />
+<img src="./assets/Images/about-us-page.png"/>
 
 ## Credits
 
