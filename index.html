@@ -436,10 +436,10 @@
             <div class="p-5 text-center bg-light">
                <h1 class="mb-3 text-black">What's in your Food?</h1>
                <!-- added by ben 3/25/23 -->
-               <button id="searchHistoryNutrition" onClick="searchHistoryBtnF()">Search History       
-               </button>
+               <button type="button" class="btn justify-content-center align-items-center col-12 btn-success" id="searchHistoryNutrition" onClick="searchHistoryBtnF()">Search History</button>
                <div id="containerBen10"></div>
-               
+               <img  src="assets/Images/clipartfries.png" class="img-fluid" style="margin-top: 20px; width: 20%;" />
+               <hr>
             </div>
             <!--Section: Food Lookup-->
             <div class="container-fluid">
@@ -448,16 +448,18 @@
                      <!-- Food Nutrition -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card h-100">
-                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
-                           <img  src="assets/Images/clipartfries.png" class="img-fluid card-img-top2" />
+                        <div class="card" style="background:linear-gradient(rgb(87, 187, 84), white); height: 500px;">
+                           <hr class="separator-bg">
+                           <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="food-name" style="margin-top: 25px;"><strong>Food Name</strong></h2>
+                           <hr class="separator-bg">
+                           <div id="cardContainerNutrition"></div>
                         </div>
                         <!-- Card -->
                      </div>
                      <!-- Food Recalls -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card h-100 align-items-center">
+                        <div class="card align-items-center" style="background:linear-gradient(rgb(87, 187, 84), white); height: 500px;">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search Food</h2>
                            <div class="d-flex w-75 ">
                               <div class="input-group">
@@ -471,10 +473,11 @@
                              </div>
 
                            <!-- Button -->
-                          <div class="row col-12 justify-content-center align-items-center">
+                          <div class="row col-12 justify-content-center align-items-center" >
                             <button type="button" class="btn justify-content-center align-items-center col-9 btn-success" id="submit-button" onClick="nutritionTwoF()">
                              SEARCH</button>
                           </div>
+                          <img  src="./assets/Images/clipart-pear.png" class="img-fluid" style="margin-top: 20px; width: 40%;" />
                           <!-- /Button -->
 <!-- Display Info Card 
 !!! have to add style="display: none;" and JS to display when button is pressed !!!
@@ -507,9 +510,11 @@
          </section>
 
          <section class="recall-container" style="display: none;">
-            <div class="p-5 text-center bg-light">
+            <div class="p-5 text-center">
                <h1 class="mb-3 text-black">What Food is being recalled?</h1>
                <button type="button" class="btn dropdown-trigger btn justify-content-center align-items-center col-9 btn-danger" href='#' data-target='dropdown1'>Search History</button>
+               <br><img  src="assets/Images/clipartfoodwarning.png" class="img-fluid"  style="margin-top: 20px; width: 20%;" />
+               <hr>
             </div>
             <!--Section: Food Lookup-->
             <div class="container-fluid">
@@ -518,16 +523,24 @@
                      <!-- Food Nutrition -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card h-100">
-                           <h2 class="d-flex align-items-center justify-content-center card-title text-black">NameOfFood</h2>
-                           <img  src="assets/Images/clipartfoodwarning.png" class="img-fluid card-img-top2" />
-                        </div>
-                        <!-- Card -->
-                     </div>
+                        
+                           <div class="card">
+                              <div class="d-flex align-items-center justify-content-center card-title text-black" style="background:linear-gradient(rgb(241, 205, 205), white);">Location Details and Class</div>
+                           </div>
+                           <div class="card">
+                              <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="cardContainer2" style="background:linear-gradient(rgb(231, 187, 187), white);"></h2>
+                           </div>
+                           <div class="card">
+                              <div class="d-flex align-items-center justify-content-center card-title text-black" style="background:linear-gradient(rgb(241, 205, 205), white);">Food Recall Details</div>
+                           </div>
+                           <div class="card">
+                              <div class="d-flex align-items-center justify-content-center card-title text-black" id="cardContainer1" style="background:linear-gradient(rgb(231, 187, 187), white); height: 1500px; overflow: scroll;"></div>
+                           </div>
+                           </div>
                      <!-- Food Recalls -->
                      <div class="col-md-6">
                         <!-- Card -->
-                        <div class="card h-100 align-items-center">
+                        <div class="card align-items-center">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search by State</h2>
                            <div class="d-flex w-75 ">
                               <div class="input-group">
@@ -547,9 +560,9 @@
                            <!-- /Button -->
 <!-- Display Info Card 
 !!! have to add style="display: none;" and JS to display when button is pressed !!!
--->                        <a id="scale-demo" href="#!" class="scale-transition">
-                              <div id="cardContainer"></div>
-                           </a>
+-->                       
+                              <div id="cardContainer" style="height: 1499px; overflow: scroll;"></div>
+                           
                           <!-- <div class=" p-3 card border border-danger rounded col-12 align-items-center text-black h-55 ">
                           <h5 class="foodName1">FoodName1</h5>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, eaque! Sed quas atque iste animi! Rerum officia consectetur ratione magnam, pariatur quia, nesciunt iure saepe odio accusantium similique quibusdam sunt!</p>
@@ -623,23 +636,23 @@
                   <br>So, reach out to the Awesome Geckos today, and let them help you build an app that not only meets your needs but also helps create a more just and sustainable world for all.
                </p>
                <hr class="separator-bg">
-               <h1 class="mb-3 text-black">Creator's Portfolio Links</h1>
+               <h1 class="mb-3 text-black">Creator's GitHub Profile Links</h1>
                <section style="width: 100%;" style="margin-top: 10px; margin-bottom: 10px;">
                <div class="chip waves-effect" id="socials-included" style="margin-top: 20px; margin-bottom: 20px; background: linear-gradient(rgb(175, 173, 173), rgb(235, 233, 233));">
                   <img src="./assets/Images/clipartburgerwarn.png" alt="Contact Person">
-                  <a href="https://jayp308.github.io/work-portfolio/" target="_blank" id="hover-effects1">Junnel R. Padilla</a>
+                  <a href="https://github.com/jayP308" target="_blank" id="hover-effects1">Junnel R. Padilla</a>
                 </div>
                 <div class="chip waves-effect" id="socials-included" style="margin-top: 20px; margin-bottom: 20px; background: linear-gradient(rgb(175, 173, 173), rgb(235, 233, 233));">
                   <img src="./assets/Images/clipartfoodsafety.png" alt="Contact Person">
-                  <a href="" target="_blank" id="hover-effects1">Brian Alvarez Magana</a>
+                  <a href="https://github.com/BrianAlvarezMagana" target="_blank" id="hover-effects1">Brian Alvarez Magana</a>
                 </div>
                 <div class="chip waves-effect" id="socials-included" style="margin-top: 20px; margin-bottom: 20px; background: linear-gradient(rgb(175, 173, 173), rgb(235, 233, 233));">
                   <img src="./assets/Images/clipartfries.png" alt="Contact Person">
-                  <a href="https://algorithmnblues92.github.io/professional_portfolio/" target="_blank" id="hover-effects1">Benjamin Nguyen</a>
+                  <a href="https://github.com/algorithmnblues92" target="_blank" id="hover-effects1">Benjamin Nguyen</a>
                 </div>
                 <div class="chip waves-effect" id="socials-included" style="margin-top: 20px; margin-bottom: 20px; background: linear-gradient(rgb(175, 173, 173), rgb(235, 233, 233));">
                   <img src="./assets/Images/clipartfruitbasket.png" alt="Contact Person">
-                  <a href="" target="_blank" id="hover-effects1">Ryan Reid</a>
+                  <a href="https://github.com/ReidRym" target="_blank" id="hover-effects1">Ryan Reid</a>
                 </div>
                </section>
                <br>

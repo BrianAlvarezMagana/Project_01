@@ -8,6 +8,10 @@
 
 ## Screenshots
 
+Landing Page
+<img src="./assets/images/landing-page.png">
+
+
 ## Credits
 
 Junnel R. Padilla, Brian Alvarez, Benjamin Nguyen, Ryan Reid

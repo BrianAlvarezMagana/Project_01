@@ -165,6 +165,12 @@ hr.separator-bg1 {
     background-repeat: no-repeat;
 }
 
+.too-much {
+    border: 0;
+    height: 3em;
+    width: 100%;
+}
+
 #socials-included {
     width: 50%;
     cursor: pointer;
@@ -316,4 +322,37 @@ hr.separator-bg1 {
     position: fixed;
     top: 0;
     right: 0;
+}
+.card-el {
+    width: 50%;
+    text-align: center;
+    background:linear-gradient(rgb(233, 183, 183), white);
+}
+
+#cardContainer2 {
+    text-align: center;
+}
+
+.color-effect {
+    color: red;
+    text-align: center;
+}
+
+.color-effect1 {
+    color: black;
+    text-align: center;
+}
+
+.card-el:hover {
+    cursor: pointer;
+    background:linear-gradient(rgb(240, 113, 113), white);
+}
+
+.color-effect2 {
+    background:linear-gradient(rgb(87, 187, 84), white);
+    font-size: 20px;
+}
+
+#food-name {
+    font-style: bold;
 }
