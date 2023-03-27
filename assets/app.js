@@ -417,7 +417,7 @@ searchhb.style.textAlign = "center";
 searchhb.style.justifyContent = "center";
 
 
-function searchBtnF () {
+function searchNutriBtnF () {
  console.log("search btn clicked");
  console.log(userInput.value);
 
@@ -711,7 +711,7 @@ for (let x=0; x<foundMatchArray.length; x++) {
 function previousHistoryBtn1() {
  console.log("previous history btn 1 clicked");
  userInput.value = document.getElementById("cardHistoryEl1").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
  
@@ -720,7 +720,7 @@ function previousHistoryBtn1() {
 function previousHistoryBtn2() {
  console.log("previous history btn 2 clicked");
  userInput.value = document.getElementById("cardHistoryEl2").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -728,7 +728,7 @@ function previousHistoryBtn2() {
 function previousHistoryBtn3() {
  console.log("previous history btn 3 clicked");
  userInput.value = document.getElementById("cardHistoryEl3").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -736,7 +736,7 @@ function previousHistoryBtn3() {
 function previousHistoryBtn4() {
  console.log("previous history btn 4 clicked");
  userInput.value = document.getElementById("cardHistoryEl4").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -744,7 +744,7 @@ function previousHistoryBtn4() {
 function previousHistoryBtn5() {
  console.log("previous history btn 5 clicked");
  userInput.value = document.getElementById("cardHistoryEl5").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -752,7 +752,7 @@ function previousHistoryBtn5() {
 function previousHistoryBtn6() {
  console.log("previous history btn 6 clicked");
  userInput.value = document.getElementById("cardHistoryEl6").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -760,7 +760,7 @@ function previousHistoryBtn6() {
 function previousHistoryBtn7() {
  console.log("previous history btn 7 clicked");
  userInput.value = document.getElementById("cardHistoryEl7").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -768,7 +768,7 @@ function previousHistoryBtn7() {
 function previousHistoryBtn8() {
  console.log("previous history btn 8 clicked");
  userInput.value = document.getElementById("cardHistoryEl8").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -776,7 +776,7 @@ function previousHistoryBtn8() {
 function previousHistoryBtn9() {
  console.log("previous history btn 9 clicked");
  userInput.value = document.getElementById("cardHistoryEl9").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -784,12 +784,12 @@ function previousHistoryBtn9() {
 function previousHistoryBtn10() {
  console.log("previous history btn 10 clicked");
  userInput.value = document.getElementById("cardHistoryEl10").innerHTML;
- searchBtnF();
+ searchNutriBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
 
 function nutritionTwoF() {
-  searchBtnF();
+  searchNutriBtnF();
   nutritionFactSearchBtnF();
 }
