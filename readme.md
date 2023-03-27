@@ -9,7 +9,7 @@
 ## Screenshots
 
 Landing Page
-<img src="./assets/images/landing-page.png">
+<img src="./assets/images/">
 
 
 ## Credits
