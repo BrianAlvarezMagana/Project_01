@@ -1,5 +1,8 @@
 # Dirty Foods
 
+## URL
+https://brianalvarezmagana.github.io/Project_01/
+
 ## Usage
 
 Are you curious about how much calories, protein or fat your eating? Are you also curious if the food your buying is has been recalled? Well this app is perfect for you!
