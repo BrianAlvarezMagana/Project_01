@@ -452,7 +452,11 @@
                            <hr class="separator-bg">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black" id="food-name" style="margin-top: 25px;"><strong>Food Name</strong></h2>
                            <hr class="separator-bg">
-                           <div id="cardContainerNutrition"></div>
+                           <div id="cardContainerNutrition">
+                              <div id="cardContainerNutritionError" style="text-align: center; font-size: 31px;">
+                                 Something went wrong! Try your search again!
+                              </div>
+                           </div>
                         </div>
                         <!-- Card -->
                      </div>
@@ -461,6 +465,7 @@
                         <!-- Card -->
                         <div class="card align-items-center" style="background:linear-gradient(rgb(87, 187, 84), white); height: 500px;">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search Food</h2>
+                           <h4 class="mb-4" style="font-size: 15px; color: rgb(78, 76, 76); font-style: italic;">Ex. "pineapple", "hotdog", etc.</h4>
                            <div class="d-flex w-75 ">
                               <div class="input-group">
                                  <div class="form-outline">
@@ -485,9 +490,7 @@
 
 <!-- error message div -->
 <div id="cardContainerNutrition">
-   <div id="cardContainerNutritionError">
-   Something went wrong! Try your search again!
-</div>
+  
 </div>
 
 
@@ -542,6 +545,7 @@
                         <!-- Card -->
                         <div class="card align-items-center">
                            <h2 class="d-flex align-items-center justify-content-center card-title text-black">Search by State</h2>
+                           <h4 class="mb-4" style="font-size: 15px; color: rgb(78, 76, 76); font-style: italic;">Ex. "CA", "NY", etc.</h4>
                            <div class="d-flex w-75 ">
                               <div class="input-group">
                                  <div class="form-outline">
