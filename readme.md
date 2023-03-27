@@ -19,23 +19,23 @@ included about us page to give user a little information about us and it also in
 ## Screenshots
 
 Landing Page
-<img src="./assets/images/">
+<img src="./assets/images/landing-page.png" />
 
 Nutritional Facts Page
-<img src="./assets/images/">
+<img src="./assets/images/nutritional-facts-page.png"/>
 
 Food Recall Page
-<img src="./assets/images/">
+<img src="./assets/images/food-recall-page.png" />
 
 Facts & FAQs Page
-<img src="./assets/images/">
+<img src="./assets/images/facts-page.png" />
 
 About Us Page
-<img src="./assets/images/">
+<img src="./assets/images/about-us-page.png"/>
 
 ## Credits
 
-Junnel R. Padilla, Brian Alvarez Magana, Benjamin Nguyen, Ryan Reid, pixabay, chatGPT, ww3schools, stackoverflow, google, youtube.
+Junnel R. Padilla, Brian Alvarez Magana, Benjamin Nguyen, Ryan Reid, pixabay, chatGPT, ww3schools, stackoverflow, google, youtube. github
 
 ## License
 
