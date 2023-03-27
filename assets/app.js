@@ -83,7 +83,7 @@ function showSlides1(n) {
 
 // Loading Pages for each click on each page
 searchHome.addEventListener("click", () => {
-    let homeImg = "./assets/images/home-page-loading.gif";
+    let homeImg = "./assets/Images/home-page-loading.gif";
     swal ({
         title: "Home Page",
         icon: homeImg,
@@ -96,7 +96,7 @@ searchHome.addEventListener("click", () => {
 })
 
 searchNutri.addEventListener("click", () => {
-  let nutriImg = "./assets/images/nutri-page-loading.gif";
+  let nutriImg = "./assets/Images/nutri-page-loading.gif";
   swal ({
       title: "Nutritional Facts Page",
       icon: nutriImg,
@@ -114,7 +114,7 @@ searchNutri.addEventListener("click", () => {
 })
 
 searchNu.addEventListener("click", () => {
-    let nutriImg = "./assets/images/nutri-page-loading.gif";
+    let nutriImg = "./assets/Images/nutri-page-loading.gif";
     swal ({
         title: "Nutritional Facts Page",
         icon: nutriImg,
@@ -132,7 +132,7 @@ searchNu.addEventListener("click", () => {
 })
 
 searchFood.addEventListener("click", () => {
-  let nutriImg = "./assets/images/recall-page-loading.gif";
+  let nutriImg = "./assets/Images/recall-page-loading.gif";
   swal ({
       title: "Food Recall Page",
       icon: nutriImg,
@@ -150,7 +150,7 @@ searchFood.addEventListener("click", () => {
 })
 
 searchRe.addEventListener("click", () => {
-    let nutriImg = "./assets/images/recall-page-loading.gif";
+    let nutriImg = "./assets/Images/recall-page-loading.gif";
     swal ({
         title: "Food Recall Page",
         icon: nutriImg,
@@ -168,7 +168,7 @@ searchRe.addEventListener("click", () => {
 })
 
 searchFaqs.addEventListener("click", () => {
-  let nutriImg = "./assets/images/facts-loading-image1.gif";
+  let nutriImg = "./assets/Images/facts-loading-image1.gif";
   swal ({
       title: "Facts & FAQs Page",
       icon: nutriImg,
@@ -186,7 +186,7 @@ searchFaqs.addEventListener("click", () => {
 })
 
 searchFacts.addEventListener("click", () => {
-    let nutriImg = "./assets/images/facts-loading-image1.gif";
+    let nutriImg = "./assets/Images/facts-loading-image1.gif";
     swal ({
         title: "Facts & FAQs Page",
         icon: nutriImg,
@@ -204,7 +204,7 @@ searchFacts.addEventListener("click", () => {
 })
 
 searchUs.addEventListener("click", () => {
-  let nutriImg = "./assets/images/about-us-loading.gif";
+  let nutriImg = "./assets/Images/about-us-loading.gif";
   swal ({
       title: "About Us Page",
       icon: nutriImg,
@@ -223,7 +223,7 @@ searchUs.addEventListener("click", () => {
 })
 
 searchAbout.addEventListener("click", () => {
-    let nutriImg = "./assets/images/about-us-loading.gif";
+    let nutriImg = "./assets/Images/about-us-loading.gif";
     swal ({
         title: "About Us Page",
         icon: nutriImg,
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if(card.textContent === searchResultArray[i].product_description){
         cardCon1.innerHTML = " ";
         cardCon2.innerHTML = " ";
-        let codeSeparator = "./assets/images/separator-image.png";
+        let codeSeparator = "./assets/Images/separator-image.png";
         let proDesc = searchResultArray[i].product_description;
         let proType = searchResultArray[i].product_type;
         let compName = searchResultArray[i].recalling_firm;
