@@ -16,6 +16,9 @@ let searchNutri = document.getElementById("search-nf");
 let searchFood = document.getElementById("search-fr");
 let searchUs = document.getElementById("about-us-page");
 let searchFaqs = document.getElementById("facts-and-faqs");
+var cardCon = document.getElementById("cardContainer");
+var cardCon1 = document.getElementById("cardContainer1");
+var cardCon2 = document.getElementById("cardContainer2");
 let savedCities = JSON.parse(localStorage.getItem("data")) || [];
 
 // Nutritional Facts Landing Page
@@ -282,11 +285,11 @@ document.addEventListener('DOMContentLoaded', function() {
             text: ' ',
             timer: 2000
         })
-        document.getElementById("suggestions").innerHTML = "Suggestions:"
+        document.getElementById("suggestions").innerHTML = "Brand Suggestions:"
         return;
     } else {
         searchBar.value = " ";
-        document.getElementById("suggestions").innerHTML = "Top Results:";
+        document.getElementById("suggestions").innerHTML = "Top Brand Results:";
         var li = document.createElement("a");
         if(savedCities.indexOf(userInput) == -1){
             savedCities.push(userInput);
@@ -305,6 +308,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   for(let i=0; i < savedCities.length; i++){
       let itemStored = document.createElement("a");
+      if(savedCities[i] === " "){
+        savedCities[i].innerHTML = "";
+      } else {
       itemStored.textContent = savedCities[i];
       itemStored.className = "hover-effect";
       cityList.appendChild(itemStored);
@@ -312,6 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let result1 = itemStored.textContent;
         searchBar.value = result1;
       })
+    }
   }
   clearHistory.addEventListener("click", ()=> {
       localStorage.removeItem("data");
@@ -365,59 +372,141 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-      for(i=0;i<searchResultArray.length; i++) {
-
-
- 
-    var cardCon = document.getElementById("cardContainer");
-    var card = document.createElement("div");
-    var proDesc = document.createElement("div");
-    var reasonR = document.createElement("div");
-    var st = document.createElement("div");
-    var cit = document.createElement("div");
-    var disP = document.createElement("div");
-    var stats = document.createElement("div");
-    var termDate = document.createElement("div");
-
+    for(i=0;i<searchResultArray.length; i++) {
+    let proDesc = searchResultArray[i].product_description;
+    let card = document.createElement("div");
+    card.className = "card-el";
+    cardCon.appendChild(card);
+    
 
     card.setAttribute("id", "cardEl" + i);
     /// added by brian
-    card.classList.add("p-3", "card", "border", "border-danger", "rounded", "w-100", "align-items-center");
-    ///
-    proDesc.setAttribute("id", "proDescEl" + i);
-    reasonR.setAttribute("id", "reasonREl" + i);
-    st.setAttribute("id", "stEl" + i);
-    cit.setAttribute("id", "citEl" + i);
-    disP.setAttribute("id", "disP" + i);
-    stats.setAttribute("id", "stats" + i);
-    termDate.setAttribute("id", "termDateEl" + i);
+    card.classList.add("p-3", "card", "border", "border-danger", "rounded", "w-100");
 
+    let proDescEl = document.createElement("div");
+    proDescEl.textContent = proDesc;
+    card.appendChild(proDescEl);
+    
+    card.addEventListener("click", () => {
+      for(i=0;i<searchResultArray.length; i++){
+      if(card.textContent === searchResultArray[i].product_description){
+        cardCon1.innerHTML = " ";
+        cardCon2.innerHTML = " ";
+        let codeSeparator = "./assets/images/separator-image.png";
+        let proDesc = searchResultArray[i].product_description;
+        let proType = searchResultArray[i].product_type;
+        let compName = searchResultArray[i].recalling_firm;
+        let currentStatus = searchResultArray[i].status;
+        let termDate = searchResultArray[i].termination_date;
+        let whyRecall = searchResultArray[i].reason_for_recall;
+        let lotNumber = searchResultArray[i].code_info;
+        let conductedBy = "Food and Drug Administration (FDA)"
+        let currentCity = searchResultArray[i].city;
+        let currentState = searchResultArray[i].state;
+        let letsClassify = searchResultArray[i].classification;
+        let card1 = document.createElement("div");
+        let card2 = document.createElement("div");
+        cardCon2.appendChild(card2);
+        cardCon1.appendChild(card1);
 
-    cardCon.appendChild(card);
-    card.appendChild(proDesc);
-    card.appendChild(reasonR);
-    card.appendChild(st);
-    card.appendChild(cit);
-    card.appendChild(disP);
-    card.appendChild(stats);
-    card.appendChild(termDate);
+        let currentCityEl = document.createElement("div");
+        currentCityEl.textContent = currentCity + "," + " " + currentState;
+        card2.appendChild(currentCityEl);
 
+        let letsClassifyEl = document.createElement("div");
+        letsClassifyEl.textContent = letsClassify;
+        card2.appendChild(letsClassifyEl);
 
+        let codeSeparatorEl = document.createElement("img");
+        codeSeparatorEl.src = codeSeparator;
+        codeSeparatorEl.className = "too-much";
+        card1.appendChild(codeSeparatorEl);
 
-    console.log(searchResultArray);
+        let proDescEl = document.createElement("div");
+        let proDescLi = document.createElement("div");
+        proDescEl.className = "color-effect1";
+        proDescLi.className = "color-effect";
+        proDescLi.textContent = "Brand:"
+        proDescEl.textContent = proDesc;
+        card1.appendChild(proDescLi);
+        card1.appendChild(proDescEl);
 
-    proDesc.textContent = searchResultArray[i].product_description;
-    reasonR.textContent = searchResultArray[i].reason_for_recall;
-    st.textContent = searchResultArray[i].state;
-    cit.textContent = searchResultArray[i].city;
-    disP.textContent = searchResultArray[i].distribution_pattern;
-    stats.textContent = searchResultArray[i].status;
-    termDate.textContent = searchResultArray[i].termination_date;
-    console.log("result counter variable :" + resultCounterV);
+        let codeSeparatorEl1 = document.createElement("img");
+        codeSeparatorEl1.src = codeSeparator;
+        codeSeparatorEl1.className = "too-much";
+        card1.appendChild(codeSeparatorEl1);
+
+        let proTypeEl = document.createElement("div");
+        let proTypeLi = document.createElement("div");
+        proTypeEl.className = "color-effect1";
+        proTypeLi.className = "color-effect";
+        proTypeLi.textContent = "Product Type:"
+        proTypeEl.textContent = proType;
+        card1.appendChild(proTypeLi);
+        card1.appendChild(proTypeEl);
+    
+        let compNameEl = document.createElement("div");
+        let compNameLi = document.createElement("div");
+        compNameEl.className = "color-effect1";
+        compNameLi.className = "color-effect";
+        compNameLi.textContent = "Company Name:"
+        compNameEl.textContent = compName;
+        card1.appendChild(compNameLi);
+        card1.appendChild(compNameEl);
+    
+        let currentStatusEl = document.createElement("div");
+        let currentStatusLi = document.createElement("div");
+        currentStatusEl.className = "color-effect1";
+        currentStatusLi.className = "color-effect";
+        currentStatusLi.textContent = "Status:";
+        currentStatusEl.textContent = currentStatus;
+        card1.appendChild(currentStatusLi);
+        card1.appendChild(currentStatusEl);
+    
+        let termDateEl = document.createElement("div");
+        let termDateLi = document.createElement("div");
+        termDateEl.className = "color-effect1";
+        termDateLi.className = "color-effect";
+        termDateLi.textContent = "Termination Date:"
+        termDateEl.textContent = termDate;
+        card1.appendChild(termDateLi);
+        card1.appendChild(termDateEl);
+    
+        let whyRecallEl = document.createElement("div");
+        let whyRecallLi = document.createElement("div");
+        whyRecallEl.className = "color-effect1";
+        whyRecallLi.className = "color-effect";
+        whyRecallLi.textContent = "Reason:";
+        whyRecallEl.textContent = whyRecall;
+        card1.appendChild(whyRecallLi);
+        card1.appendChild(whyRecallEl);
+    
+        let lotNumberEl = document.createElement("div");
+        let lotNumberLi = document.createElement("div");
+        lotNumberEl.className = "color-effect1";
+        lotNumberLi.className = "color-effect";
+        lotNumberLi.textContent = "UPC:";
+        lotNumberEl.textContent = lotNumber;
+        card1.appendChild(lotNumberLi);
+        card1.appendChild(lotNumberEl);
+    
+        let conductedByEl = document.createElement("div");
+        let conductedByLi = document.createElement("div");
+        conductedByEl.className = "color-effect1";
+        conductedByLi.className = "color-effect";
+        conductedByLi.textContent = "Conducted By:";
+        conductedByEl.textContent = conductedBy;
+        card1.appendChild(conductedByLi);
+        card1.appendChild(conductedByEl);
+        
+
+      }
+    }
+    })
       }
     }
 
-    ).catch((error) => {SearchBtnF()})
+    ).catch((error) => {searchBtnF()})
   
   }
 
@@ -464,8 +553,8 @@ document.getElementById("cardContainerNutritionError").style.display = "none";
  
 
     for(i=0;i<data.length; i++) {
-
     var cardCon = document.getElementById("cardContainerNutrition");
+    let foodName = document.getElementById("food-name");
     var card = document.createElement("div");
     var nameFood = document.createElement("div");
     var servingSizeG = document.createElement("div");
@@ -478,12 +567,13 @@ document.getElementById("cardContainerNutritionError").style.display = "none";
     var sugar = document.createElement("div");
     var protein = document.createElement("div");
     var potassium = document.createElement("div");
+    card.className = "color-effect2";
 
     /// added by brian
-    card.classList.add("p-3", "card", "border", "border-danger", "rounded", "w-100", "align-items-center");
+    card.classList.add("p-3", "card", "rounded", "w-100", "align-items-center");
     ///
 
-
+    card.innerHTML = " ";
     card.setAttribute("id", "cardEl" + i);
     nameFood.setAttribute("id", "nameFoodEl" + i);
     servingSizeG.setAttribute("id", "servingSizeGEl" + i);
@@ -499,7 +589,6 @@ document.getElementById("cardContainerNutritionError").style.display = "none";
 
 
     cardCon.appendChild(card);
-    card.appendChild(nameFood);
     card.appendChild(servingSizeG);
     card.appendChild(calories);
     card.appendChild(fatTotal);
@@ -512,7 +601,7 @@ document.getElementById("cardContainerNutritionError").style.display = "none";
     card.appendChild(potassium);
 
 
-    nameFood.textContent = "name :" + data[i].name;
+    foodName.textContent = data[i].name;
     servingSizeG.textContent = "serving size :" + data[i].serving_size_g + " g";
     calories.textContent = "calories :" + data[i].calories;
     fatTotal.textContent = "fat total :" + data[i].fat_total_g + " g";
@@ -559,13 +648,12 @@ var foundMatchArray = [];
 var searchhb = document.getElementById("searchHistoryNutrition");
 
 // searchhb.style.margin = "40px";
-searchhb.style.width = "100%";
-searchhb.style.backgroundColor = "red";
+
 searchhb.style.textAlign = "center";
 searchhb.style.justifyContent = "center";
 
 
-function searchBtnF () {
+function searchNutriBtnF () {
  console.log("search btn clicked");
  console.log(userInput.value);
 
@@ -859,7 +947,7 @@ for (let x=0; x<foundMatchArray.length; x++) {
 function previousHistoryBtn1() {
  console.log("previous history btn 1 clicked");
  userInput.value = document.getElementById("cardHistoryEl1").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
  
@@ -868,7 +956,7 @@ function previousHistoryBtn1() {
 function previousHistoryBtn2() {
  console.log("previous history btn 2 clicked");
  userInput.value = document.getElementById("cardHistoryEl2").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -876,7 +964,7 @@ function previousHistoryBtn2() {
 function previousHistoryBtn3() {
  console.log("previous history btn 3 clicked");
  userInput.value = document.getElementById("cardHistoryEl3").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -884,7 +972,7 @@ function previousHistoryBtn3() {
 function previousHistoryBtn4() {
  console.log("previous history btn 4 clicked");
  userInput.value = document.getElementById("cardHistoryEl4").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -892,7 +980,7 @@ function previousHistoryBtn4() {
 function previousHistoryBtn5() {
  console.log("previous history btn 5 clicked");
  userInput.value = document.getElementById("cardHistoryEl5").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -900,7 +988,7 @@ function previousHistoryBtn5() {
 function previousHistoryBtn6() {
  console.log("previous history btn 6 clicked");
  userInput.value = document.getElementById("cardHistoryEl6").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -908,7 +996,7 @@ function previousHistoryBtn6() {
 function previousHistoryBtn7() {
  console.log("previous history btn 7 clicked");
  userInput.value = document.getElementById("cardHistoryEl7").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -916,7 +1004,7 @@ function previousHistoryBtn7() {
 function previousHistoryBtn8() {
  console.log("previous history btn 8 clicked");
  userInput.value = document.getElementById("cardHistoryEl8").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -924,7 +1012,7 @@ function previousHistoryBtn8() {
 function previousHistoryBtn9() {
  console.log("previous history btn 9 clicked");
  userInput.value = document.getElementById("cardHistoryEl9").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
@@ -932,13 +1020,13 @@ function previousHistoryBtn9() {
 function previousHistoryBtn10() {
  console.log("previous history btn 10 clicked");
  userInput.value = document.getElementById("cardHistoryEl10").innerHTML;
- searchBtnF();
+ nutritionFactSearchBtnF();
  document.getElementById("containerBen10").removeChild(document.getElementById("dropDownDisplay"));
  searchhb.style.display = "flex";
 }
 
 function nutritionTwoF() {
-  searchBtnF();
+  searchNutriBtnF();
   nutritionFactSearchBtnF();
 }
 
