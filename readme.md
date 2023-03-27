@@ -2,7 +2,17 @@
 
 ## Usage
 
+Are you curious about how much calories, protein or fat your eating? Are you also curious if the food your buying is has been recalled? Well this app is perfect for you!
+Our app gives user the tools to check nutritional facts and as well as food recalls. This is an everyday use and a great app and easy to navigate. which just na few click 
+and a few keywords for searching, this app will show you what you are looking for. so try it out now!
+
 ## Description
+
+Our app that we created includes a landing page, that contains a few suggestions for the user with both nutritional facts and food recall information. This landing also includes 
+buttons to navigate user to different pages as well as a side bar with animation when hover. As the user goes to every page, there will be different and fun little loading pages.
+Overall, our app contains a nutritional facts page where a user can search for a specific food and will give information for each search. It also includes a food recall page where 
+a user can search for any food recalls. We also included a facts page, and FAQs in one that shows information about food safety and also frequently ask questions. lastly, we also 
+included about us page to give user a little information about us and it also include our links to our GitHub profiles. 
 
 ## URL
 
@@ -11,10 +21,21 @@
 Landing Page
 <img src="./assets/images/">
 
+Nutritional Facts Page
+<img src="./assets/images/">
+
+Food Recall Page
+<img src="./assets/images/">
+
+Facts & FAQs Page
+<img src="./assets/images/">
+
+About Us Page
+<img src="./assets/images/">
 
 ## Credits
 
-Junnel R. Padilla, Brian Alvarez Magana, Benjamin Nguyen, Ryan Reid
+Junnel R. Padilla, Brian Alvarez Magana, Benjamin Nguyen, Ryan Reid, pixabay, chatGPT, ww3schools, stackoverflow, google, youtube.
 
 ## License
 
