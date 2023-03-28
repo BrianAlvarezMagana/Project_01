@@ -16,6 +16,8 @@ included about us page to give user a little information about us and it also in
 
 ## URL
 
+https://brianalvarezmagana.github.io/Project_01/
+
 ## Screenshots
 
 Landing Page
